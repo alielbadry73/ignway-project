@@ -1,0 +1,736 @@
+<html lang="en"><head>
+  <title>About Us - IG Way IGCSE Tutoring</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"><link rel="stylesheet" type="text/css" href="icomoon/icomoon.css"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="css/vendor.css"><link rel="stylesheet" type="text/css" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&amp;family=Roboto+Slab&amp;display=swap" rel="stylesheet"><style>
+    body {
+        background-color: #F8F8F8;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* WhatsApp Chat Button Styles */
+    .nav-link[onclick="openWhatsAppChat()"] {
+      transition: all 0.3s ease !important;
+      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3) !important;
+    }
+
+    .nav-link[onclick="openWhatsAppChat()"]:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4) !important;
+      background: linear-gradient(135deg, #128c7e, #25d366) !important;
+    }
+
+    .nav-link[onclick="openWhatsAppChat()"]:active {
+      transform: translateY(0) !important;
+      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3) !important;
+    }
+
+    @media (max-width: 768px) {
+      .nav-link[onclick="openWhatsAppChat()"] {
+        padding: 6px 12px !important;
+        font-size: 0.85rem !important;
+      }
+    }
+</style></head>
+  <script src="js/no-storage.js"></script>
+
+<body class="">
+
+  <!-- Top Utility Bar -->
+  <div class="top-utility-bar" style="position:relative; height:70px;">
+    <div class="container-fluid" style="position:relative; height:100%;">
+      
+      <!-- Centered Logo -->
+      <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);">
+        <a href="/">
+          <img src="./ig-nation-logo-graduation (1).png" alt="IG Nation" style="height:55px; width:auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); transition: all 0.3s ease;">
+        </a>
+      </div>
+
+      <!-- Right-aligned Utility Links -->
+      <div style="position:absolute; right:20px; top:50%; transform:translateY(-50%); display:flex; align-items:center; gap:20px; font-size:14px;">
+        
+        <!-- User Name Display -->
+        <div id="userNameDisplay" style="display:none;">
+          <span class="text-primary fw-bold" id="displayUserName">User</span>
+        </div>
+
+        <!-- Cart Button -->
+        <a href="#" class="utility-link" data-bs-toggle="modal" data-bs-target="#cartModal" style="text-decoration:none; color:#000; display:flex; align-items:center; position:relative;">
+          <iconify-icon icon="material-symbols:shopping-cart" style="margin-right:5px;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5.588 21.413Q5 20.825 5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22t-1.412-.587m10 0Q15 20.825 15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22t-1.412-.587M5.2 4h14.75q.575 0 .875.513t.025 1.037l-3.55 6.4q-.275.5-.737.775T15.55 13H8.1L7 15h12v2H7q-1.125 0-1.7-.987t-.05-1.963L6.6 11.6L3 4H1V2h3.25z"></path></svg></template></iconify-icon>
+          Cart <span class="badge bg-primary ms-1" id="cartCount">0</span>
+        </a>
+
+        <!-- Favorites -->
+        <a href="#" class="utility-link" data-bs-toggle="modal" data-bs-target="#favoritesModal" style="text-decoration:none; color:#000; display:flex; align-items:center;">
+          <iconify-icon icon="material-symbols:favorite" style="margin-right:5px;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812T2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.387 2.25t-1.363 2.412t-2.625 2.963T13.45 19.7z"></path></svg></template></iconify-icon>
+          Favorites
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="main-navigation">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-7">
+          <ul class="nav-menu d-flex list-unstyled mb-0">
+           <li class="nav-item">
+  <a class="nav-link" href="./index.html">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="./courses.html">Courses</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" href="./about.html">About Us</a> 
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="./contact.html">Contact Us</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="/community">Community</a>
+</li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" onclick="openWhatsAppChat()" style="background: linear-gradient(135deg, #25d366, #128c7e); color: white; border-radius: 20px; padding: 8px 16px; font-weight: 600; display: flex; align-items: center; gap: 5px;">
+                <iconify-icon icon="logos:whatsapp-icon" style="font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 258"><defs><linearGradient id="SVGBRLHCcSy" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1FAF38"></stop><stop offset="100%" stop-color="#60D669"></stop></linearGradient><linearGradient id="SVGHW6lecxh" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#F9F9F9"></stop><stop offset="100%" stop-color="#FFF"></stop></linearGradient></defs><path fill="url(#SVGBRLHCcSy)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"></path><path fill="url(#SVGHW6lecxh)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"></path><path fill="#FFF" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"></path></svg></template></iconify-icon>
+                Chat with Staff
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-5">
+          <div class="d-flex justify-content-end align-items-center gap-2">
+            <a href="#" class="btn btn-outline-secondary login-btn" data-bs-toggle="modal" data-bs-target="#loginModal" style="font-size: 14px; padding: 8px 16px; display: inline-block;"><iconify-icon icon="material-symbols:login" class="me-1"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21v-2h7V5h-7V3h7q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm-2-4l-1.375-1.45l2.55-2.55H3v-2h8.175l-2.55-2.55L10 7l5 5z"></path></svg></template></iconify-icon>Login</a>
+            <a href="#" class="btn btn-primary register-btn" data-bs-toggle="modal" data-bs-target="#registerModal" style="font-size: 14px; padding: 8px 16px; display: inline-block;"><iconify-icon icon="material-symbols:person-add" class="me-1"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M18 14v-3h-3V9h3V6h2v3h3v2h-3v3zM6.175 10.825Q5 9.65 5 8t1.175-2.825T9 4t2.825 1.175T13 8t-1.175 2.825T9 12t-2.825-1.175M1 20v-2.8q0-.85.438-1.562T2.6 14.55q1.55-.775 3.15-1.162T9 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T17 17.2V20z"></path></svg></template></iconify-icon>Register Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Us Page Content -->
+  <section id="about-content" class="padding-medium">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="text-center mb-5">
+            <h1 class="display-4 fw-semibold mb-4">About <span class="text-primary">IG Way</span></h1>
+            <p class="lead">Your trusted path to IGCSE success</p>
+          </div>
+          
+          <div class="about-content">
+            <div class="mb-5">
+              <p class="fs-5 mb-4">
+                Welcome to <strong>theIGWAY</strong> – your trusted path to IGCSE success.
+              </p>
+              
+              <p class="mb-4">
+                <strong>theIGWAY</strong> was built with a simple vision: to make high-quality IGCSE learning accessible, engaging, and effective for every student. We believe that education should not just prepare students for exams, but also inspire curiosity, confidence, and a love for learning.
+              </p>
+              
+              <p class="mb-4">
+                At <strong>theIGWAY</strong>, we bring together expert tutors, interactive lessons, and smart learning tools to create an environment where students can thrive. Whether it's mastering a challenging subject, practicing past papers, or receiving personalized feedback, our platform is designed to support every learner's journey.
+              </p>
+            </div>
+
+            <div class="row mb-5">
+              <div class="col-md-6 mb-4">
+                <div class="about-card p-4 h-100">
+                  <h3 class="text-primary mb-3">Our Mission</h3>
+                  <p class="mb-0">
+                    To empower IGCSE students with the knowledge, skills, and resources they need to achieve academic excellence and unlock future opportunities.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="about-card p-4 h-100">
+                  <h3 class="text-primary mb-3">Our Values</h3>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><strong>Excellence</strong> – Providing top-quality resources and guidance.</li>
+                    <li class="mb-2"><strong>Innovation</strong> – Using technology to make learning smarter and more accessible.</li>
+                    <li class="mb-2"><strong>Support</strong> – Creating a community where students and tutors grow together.</li>
+                    <li class="mb-0"><strong>Integrity</strong> – Building trust through transparency and dedication.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <h3 class="text-primary mb-4">Why theIGWAY?</h3>
+              <ul class="list-unstyled">
+                <li class="mb-3 d-flex align-items-start">
+                  <iconify-icon icon="material-symbols:check-circle" class="text-primary me-3 mt-1 fs-5"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"></path></svg></template></iconify-icon>
+                  <span>Access to expert IGCSE tutors.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <iconify-icon icon="material-symbols:check-circle" class="text-primary me-3 mt-1 fs-5"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"></path></svg></template></iconify-icon>
+                  <span>Tailored lessons and homework support.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <iconify-icon icon="material-symbols:check-circle" class="text-primary me-3 mt-1 fs-5"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"></path></svg></template></iconify-icon>
+                  <span>A growing library of resources and practice materials.</span>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <iconify-icon icon="material-symbols:check-circle" class="text-primary me-3 mt-1 fs-5"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"></path></svg></template></iconify-icon>
+                  <span>A supportive online community that motivates learners to achieve their best.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="text-center">
+              <div class="about-highlight p-4 rounded">
+                <p class="fs-5 mb-0 fw-semibold">
+                  At <strong>theIGWAY</strong>, we're not just preparing students for exams — we're shaping futures.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Footer -->
+  <footer id="footer" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); padding: 80px 0 0; position: relative; overflow: hidden;">
+      <!-- Background Elements -->
+      <div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: rgba(102, 126, 234, 0.1); border-radius: 50%; z-index: 1;"></div>
+      <div style="position: absolute; bottom: -100px; right: -100px; width: 300px; height: 300px; background: rgba(139, 92, 246, 0.1); border-radius: 50%; z-index: 1;"></div>
+      
+      <div class="container" style="position: relative; z-index: 2;">
+          <div class="row g-4">
+              <!-- Company Info -->
+              <div class="col-lg-4 col-md-6">
+                  <div style="margin-bottom: 30px;">
+                      <h3 style="font-size: 1.8rem; font-weight: 800; color: white; margin-bottom: 20px;">
+                          IG <span style="background: linear-gradient(45deg, #ffd700, #ffed4e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Nation</span>
+                      </h3>
+                      <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 1rem; margin-bottom: 30px;">
+                          Transforming education through innovative online learning. Join thousands of students achieving academic excellence with our expert-led courses and cutting-edge technology.
+                      </p>
+                      <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                          <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(59, 130, 246, 0.8)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+                              <iconify-icon icon="ri:facebook-fill" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"></path></svg></template></iconify-icon>
+                          </a>
+                          <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(29, 161, 242, 0.8)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+                              <iconify-icon icon="ri:twitter-fill" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M22.213 5.656a8.4 8.4 0 0 1-2.402.658A4.2 4.2 0 0 0 21.649 4c-.82.488-1.719.83-2.655 1.015a4.182 4.182 0 0 0-7.126 3.814a11.87 11.87 0 0 1-8.621-4.37a4.17 4.17 0 0 0-.566 2.103c0 1.45.739 2.731 1.86 3.481a4.2 4.2 0 0 1-1.894-.523v.051a4.185 4.185 0 0 0 3.355 4.102a4.2 4.2 0 0 1-1.89.072A4.185 4.185 0 0 0 8.02 16.65a8.4 8.4 0 0 1-6.192 1.732a11.83 11.83 0 0 0 6.41 1.88c7.694 0 11.9-6.373 11.9-11.9q0-.271-.012-.541a8.5 8.5 0 0 0 2.086-2.164"></path></svg></template></iconify-icon>
+                          </a>
+                          <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(225, 48, 108, 0.8)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+                              <iconify-icon icon="ri:instagram-fill" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5"></path></svg></template></iconify-icon>
+                          </a>
+                          <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(255, 0, 0, 0.8)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+                              <iconify-icon icon="ri:youtube-fill" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12.244 4c.534.003 1.87.016 3.29.073l.504.022c1.429.067 2.857.183 3.566.38c.945.266 1.687 1.04 1.938 2.022c.4 1.56.45 4.602.456 5.339l.001.152v.174c-.007.737-.057 3.78-.457 5.339c-.254.985-.997 1.76-1.938 2.022c-.709.197-2.137.313-3.566.38l-.504.023c-1.42.056-2.756.07-3.29.072l-.235.001h-.255c-1.13-.007-5.856-.058-7.36-.476c-.944-.266-1.687-1.04-1.938-2.022c-.4-1.56-.45-4.602-.456-5.339v-.326c.006-.737.056-3.78.456-5.339c.254-.985.997-1.76 1.939-2.021c1.503-.419 6.23-.47 7.36-.476zM9.999 8.5v7l6-3.5z"></path></svg></template></iconify-icon>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Quick Links -->
+              <div class="col-lg-2 col-md-6">
+                  <div style="margin-bottom: 30px;">
+                      <h5 style="font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Quick Links</h5>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                          <li style="margin-bottom: 12px;">
+                              <a href="./index.html" onmouseout="this.style.color=\" rgba(255,255,255,0.8)\';="" this.style.transform="\'translateX(0)\''" onmouseover="this.style.color=\" #ffd700\';="" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  Home
+                              </a>
+                          </li>
+                          <li style="margin-bottom: 12px;">
+                              <a href="./about.html" onmouseout="this.style.color=\" rgba(255,255,255,0.8)\';="" this.style.transform="\'translateX(0)\''" onmouseover="this.style.color=\" #ffd700\';="" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  About Us
+                              </a>
+                          </li>
+                          <li style="margin-bottom: 12px;">
+                              <a href="./courses.html" onmouseout="this.style.color=\" rgba(255,255,255,0.8)\';="" this.style.transform="\'translateX(0)\''" onmouseover="this.style.color=\" #ffd700\';="" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  Courses
+                              </a>
+                          </li>
+                          <li style="margin-bottom: 12px;">
+                              <a href="./contact.html" onmouseout="this.style.color=\" rgba(255,255,255,0.8)\';="" this.style.transform="\'translateX(0)\''" onmouseover="this.style.color=\" #ffd700\';="" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  Contact
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <!-- Support -->
+              <div class="col-lg-2 col-md-6">
+                  <div style="margin-bottom: 30px;">
+                      <h5 style="font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Support</h5>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                          <li style="margin-bottom: 12px;">
+                              <a href="https://wa.me/201027500835" target="_blank" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.transform='translateX(0)'">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  WhatsApp Support
+                              </a>
+                          </li>
+                          <li style="margin-bottom: 12px;">
+                              <a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.transform='translateX(0)'">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  Help Center
+                              </a>
+                          </li>
+                          <li style="margin-bottom: 12px;">
+                              <!-- FAQ removed -->
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <!-- Contact Info -->
+              <div class="col-lg-4 col-md-6">
+                  <div style="margin-bottom: 30px;">
+                      <h5 style="font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Contact Info</h5>
+                      <div style="display: flex; flex-direction: column; gap: 20px;">
+                          <div style="display: flex; align-items: center; gap: 15px;">
+                              <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
+                                  <iconify-icon icon="mdi:location" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"></path></svg></template></iconify-icon>
+                              </div>
+                              <div>
+                                  <p style="color: rgba(255,255,255,0.9); font-weight: 600; margin: 0; font-size: 0.95rem;">Address</p>
+                                  <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.9rem;">New Cairo, Egypt</p>
+                              </div>
+                          </div>
+                          <div style="display: flex; align-items: center; gap: 15px;">
+                              <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
+                                  <iconify-icon icon="solar:phone-bold" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m16.556 12.906l-.455.453s-1.083 1.076-4.038-1.862s-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61c.09 1.587.808 5 4.812 8.982c4.247 4.222 8.232 4.39 9.861 4.238c.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.437-1.787-.309-2.417.317"></path></svg></template></iconify-icon>
+                              </div>
+                              <div>
+                                  <p style="color: rgba(255,255,255,0.9); font-weight: 600; margin: 0; font-size: 0.95rem;">Phone</p>
+                                  <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.9rem;">01027500835</p>
+                              </div>
+                          </div>
+                          <div style="display: flex; align-items: center; gap: 15px;">
+                              <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);">
+                                  <iconify-icon icon="ic:baseline-email" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"></path></svg></template></iconify-icon>
+                              </div>
+                              <div>
+                                  <p style="color: rgba(255,255,255,0.9); font-weight: 600; margin: 0; font-size: 0.95rem;">Email</p>
+                                  <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.9rem;">info@ignation.com</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding: 30px 0; background: rgba(0,0,0,0.2);">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-md-6">
+                      <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.9rem;">
+                          © 2025 IG Nation. All rights reserved. | Designed with ❤️ for better education
+                      </p>
+                  </div>
+                  <div class="col-md-6 text-md-end">
+                      <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.9rem;">
+                          Made with <span style="color: #ffd700;">passion</span> for learning
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="js/plugins.js"></script>
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">
+            <iconify-icon icon="material-symbols:shopping-cart" class="me-2 text-primary"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5.588 21.413Q5 20.825 5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22t-1.412-.587m10 0Q15 20.825 15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22t-1.412-.587M5.2 4h14.75q.575 0 .875.513t.025 1.037l-3.55 6.4q-.275.5-.737.775T15.55 13H8.1L7 15h12v2H7q-1.125 0-1.7-.987t-.05-1.963L6.6 11.6L3 4H1V2h3.25z"></path></svg></template></iconify-icon>
+            Your Cart
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="cartList">
+            <div class="text-center text-muted py-4">
+              <iconify-icon icon="material-symbols:shopping-cart-outline" class="fs-1 mb-3"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5.588 21.413Q5 20.825 5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22t-1.412-.587m10 0Q15 20.825 15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22t-1.412-.587M6.15 6l2.4 5h7l2.75-5zM5.2 4h14.75q.575 0 .875.513t.025 1.037l-3.55 6.4q-.275.5-.737.775T15.55 13H8.1L7 15h12v2H7q-1.125 0-1.7-.987t-.05-1.963L6.6 11.6L3 4H1V2h3.25zm3.35 7h7z"></path></svg></template></iconify-icon>
+              <p>Your cart is empty. Start adding courses to your cart!</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+          <button type="button" class="btn btn-primary" id="checkoutBtn" disabled="">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Cart Modal -->
+
+  <!-- Favorites Modal -->
+  <div class="modal fade" id="favoritesModal" tabindex="-1" aria-labelledby="favoritesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="favoritesModalLabel">
+            <iconify-icon icon="material-symbols:favorite" class="me-2 text-danger"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l-1.45-1.3q-2.525-2.275-4.175-3.925T3.75 12.812T2.388 10.4T2 8.15Q2 5.8 3.575 4.225T7.5 2.65q1.3 0 2.475.55T12 4.75q.85-1 2.025-1.55t2.475-.55q2.35 0 3.925 1.575T22 8.15q0 1.15-.387 2.25t-1.363 2.412t-2.625 2.963T13.45 19.7z"></path></svg></template></iconify-icon>
+            Your Favorite Courses
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="favoritesList">
+            <div class="favorite-item d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <img src="images/teacher3.png" alt="IGCSE English Language" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                <div>
+                  <div class="course-title">IGCSE English Language</div>
+                  <div class="course-instructor">Dr. Emily Rodriguez - Cambridge Board</div>
+                  <div class="course-price">£249.00</div>
+                </div>
+              </div>
+              <button class="remove-favorite" onclick="removeFavorite('english')">
+                <iconify-icon icon="material-symbols:delete"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7 21q-.825 0-1.412-.587T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413T17 21zm2-4h2V8H9zm4 0h2V8h-2z"></path></svg></template></iconify-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" id="clearFavorites">Clear All Favorites</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Favorites Modal -->
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script>
+    // Cart and Favorites functionality
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    // Check login state and update UI
+    function checkLoginState() {
+        const isLoggedIn = localStorage.getItem('userLoggedIn');
+        const userName = localStorage.getItem('userName');
+        
+        if (isLoggedIn) {
+            // Show user name in utility bar
+            const userNameDisplay = document.getElementById('userNameDisplay');
+            const displayUserName = document.getElementById('displayUserName');
+            if (userNameDisplay && displayUserName) {
+                userNameDisplay.style.display = 'block';
+                displayUserName.textContent = userName || 'User';
+            }
+            
+            // Hide login and register buttons, show logout
+            const loginBtn = document.querySelector('.login-btn');
+            const registerBtn = document.querySelector('.register-btn');
+            
+            if (loginBtn) {
+                loginBtn.style.display = 'none';
+            }
+            
+            if (registerBtn) {
+                registerBtn.innerHTML = `<iconify-icon icon="material-symbols:logout" class="me-1"></iconify-icon>Logout`;
+                registerBtn.classList.remove('btn-primary');
+                registerBtn.classList.add('btn-outline-danger');
+                registerBtn.setAttribute('onclick', 'logout()');
+                registerBtn.removeAttribute('data-bs-target');
+            }
+        } else {
+            // Hide user name in utility bar
+            const userNameDisplay = document.getElementById('userNameDisplay');
+            if (userNameDisplay) {
+                userNameDisplay.style.display = 'none';
+            }
+            
+            // Show login and register buttons
+            const loginBtn = document.querySelector('.login-btn');
+            const registerBtn = document.querySelector('.register-btn');
+            
+            if (loginBtn) {
+                loginBtn.style.display = 'inline-block';
+                loginBtn.innerHTML = `<iconify-icon icon="material-symbols:login" class="me-1"></iconify-icon>Login`;
+                loginBtn.classList.remove('btn-success');
+                loginBtn.classList.add('btn-outline-secondary');
+                loginBtn.setAttribute('data-bs-target', '#loginModal');
+                loginBtn.removeAttribute('onclick');
+            }
+            
+            if (registerBtn) {
+                registerBtn.style.display = 'inline-block';
+                registerBtn.innerHTML = `<iconify-icon icon="material-symbols:person-add" class="me-1"></iconify-icon>Register Now`;
+                registerBtn.classList.remove('btn-outline-danger');
+                registerBtn.classList.add('btn-primary');
+                registerBtn.setAttribute('data-bs-target', '#registerModal');
+                registerBtn.removeAttribute('onclick');
+            }
+        }
+    }
+
+    // Logout function
+    function logout() {
+        localStorage.removeItem('userLoggedIn');
+        localStorage.removeItem('userName');
+        localStorage.removeItem('userEmail');
+        showToast('Logged out successfully', 'info');
+        checkLoginState();
+    }
+    
+    // Course data
+    const courses = {
+      mathematics: {
+        title: 'IGCSE Mathematics (Extended)',
+        instructor: 'Dr. Sarah Mitchell',
+        board: 'Cambridge Board',
+        price: '£299.00',
+        originalPrice: '£399.00',
+        image: 'images/teacher1.png'
+      },
+      physics: {
+        title: 'IGCSE Physics (Extended)',
+        instructor: 'Prof. Michael Chen',
+        board: 'Edexcel Board',
+        price: '£279.00',
+        originalPrice: '£349.00',
+        image: 'images/teacher2.png'
+      },
+      english: {
+        title: 'IGCSE English Language',
+        instructor: 'Dr. Emily Rodriguez',
+        board: 'Cambridge Board',
+        price: '£249.00',
+        originalPrice: '£329.00',
+        image: 'images/teacher3.png'
+      }
+    };
+
+    // Update cart count - now using unified cart system
+    function updateCartCount() {
+      // Use unified cart system if available
+      if (window.cartManager) {
+        window.cartManager.updateCartCount();
+      } else {
+        // Fallback for when cart system isn't loaded yet
+        const cartCount = cart.reduce((total, item) => total + (item.quantity || 1), 0);
+        const cartBadge = document.getElementById('cartCount');
+        if (cartBadge) {
+          cartBadge.textContent = cartCount;
+        }
+      }
+    }
+
+    // Update cart modal
+    function updateCartModal() {
+      const cartList = document.getElementById('cartList');
+      const checkoutBtn = document.getElementById('checkoutBtn');
+      
+      if (cart.length === 0) {
+        cartList.innerHTML = `
+          <div class="text-center text-muted py-4">
+            <iconify-icon icon="material-symbols:shopping-cart-outline" class="fs-1 mb-3"></iconify-icon>
+            <p>Your cart is empty. Start adding courses to your cart!</p>
+          </div>
+        `;
+        if (checkoutBtn) checkoutBtn.disabled = true;
+      } else {
+        cartList.innerHTML = cart.map(item => {
+          const course = courses[item.courseId];
+          return `
+            <div class="cart-item d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <img src="${course.image}" alt="${course.title}" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                <div>
+                  <div class="course-title">${course.title}</div>
+                  <div class="course-instructor">${course.instructor} - ${course.board}</div>
+                  <div class="course-price">${course.price} <span class="text-muted">x${item.quantity}</span></div>
+                </div>
+              </div>
+              <button class="remove-cart" onclick="removeFromCart('${item.courseId}')">
+                <iconify-icon icon="material-symbols:delete"></iconify-icon>
+              </button>
+            </div>
+          `;
+        }).join('');
+        if (checkoutBtn) checkoutBtn.disabled = false;
+      }
+    }
+
+    // Remove from cart function
+    function removeFromCart(courseId) {
+      cart = cart.filter(item => item.courseId !== courseId);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      updateCartModal();
+    }
+
+    // Favorites functionality
+    function toggleFavorite(courseId) {
+      console.log('toggleFavorite called with courseId:', courseId);
+      
+      const index = favorites.indexOf(courseId);
+      
+      if (index === -1) {
+        favorites.push(courseId);
+        showToast('This course was added to your favorite courses!');
+      } else {
+        favorites.splice(index, 1);
+        showToast('Course removed from favorites');
+      }
+      
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+      updateFavoriteButtons();
+      updateFavoritesModal();
+    }
+
+    function updateFavoriteButtons() {
+      document.querySelectorAll('.favorite-btn').forEach(button => {
+        const courseId = button.getAttribute('data-course');
+        const icon = button.querySelector('.iconify-icon');
+        
+        if (favorites.includes(courseId)) {
+          button.classList.add('favorited');
+          icon.setAttribute('icon', 'mdi:heart');
+        } else {
+          button.classList.remove('favorited');
+          icon.setAttribute('icon', 'mdi:heart-outline');
+        }
+      });
+    }
+
+    function updateFavoritesModal() {
+      const favoritesList = document.getElementById('favoritesList');
+      
+      if (favorites.length === 0) {
+        favoritesList.innerHTML = `
+          <div class="text-center text-muted py-4">
+            <iconify-icon icon="material-symbols:favorite-outline" class="fs-1 mb-3"></iconify-icon>
+            <p>No favorite courses yet. Start adding courses to your favorites!</p>
+          </div>
+        `;
+      } else {
+        favoritesList.innerHTML = favorites.map(courseId => {
+          const course = courses[courseId];
+          return `
+            <div class="favorite-item d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <img src="${course.image}" alt="${course.title}" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                <div>
+                  <div class="course-title">${course.title}</div>
+                  <div class="course-instructor">${course.instructor} - ${course.board}</div>
+                  <div class="course-price">${course.price}</div>
+                </div>
+              </div>
+              <button class="remove-favorite" onclick="removeFavorite('${courseId}')">
+                <iconify-icon icon="material-symbols:delete"></iconify-icon>
+              </button>
+            </div>
+          `;
+        }).join('');
+      }
+    }
+
+    function removeFavorite(courseId) {
+      favorites = favorites.filter(id => id !== courseId);
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+      updateFavoriteButtons();
+      updateFavoritesModal();
+      showToast('Course removed from favorites');
+    }
+
+    function showToast(message, type = 'info') {
+      const toastContainer = document.getElementById('toastContainer');
+      const toastId = 'toast-' + Date.now();
+      
+      let icon = 'material-symbols:info';
+      let title = 'Notification';
+      
+      if (message.includes('favorite') || message.includes('Favorite')) {
+        icon = 'material-symbols:favorite';
+        title = 'Favorite Updated!';
+      } else if (message.includes('cart') || message.includes('Cart')) {
+        icon = 'material-symbols:shopping-cart';
+        title = 'Cart Updated!';
+      }
+      
+      const toastHTML = `
+        <div class="toast" id="${toastId}" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <iconify-icon icon="${icon}" class="me-2"></iconify-icon>
+            <strong class="me-auto">${title}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            ${message}
+          </div>
+        </div>
+      `;
+      
+      toastContainer.insertAdjacentHTML('beforeend', toastHTML);
+      
+      const toastElement = document.getElementById(toastId);
+      const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 3000
+      });
+      
+      toast.show();
+      
+      toastElement.addEventListener('hidden.bs.toast', function() {
+        toastElement.remove();
+      });
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      checkLoginState();
+      updateCartCount();
+      updateCartModal();
+      updateFavoriteButtons();
+      updateFavoritesModal();
+      
+      // Clear favorites button
+      document.getElementById('clearFavorites').addEventListener('click', function() {
+        favorites = [];
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        updateFavoriteButtons();
+        updateFavoritesModal();
+        showToast('All favorites cleared');
+      });
+    });
+
+    // WhatsApp Chat Function
+    function openWhatsAppChat() {
+      const phoneNumber = '+201027500835';
+      const message = encodeURIComponent('Hello! I need assistance with my IGCSE courses. Can you help me?');
+      const whatsappUrl = `https://wa.me/${phoneNumber.replace('+', '')}?text=${message}`;
+      
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, '_blank');
+      
+      // Show a toast notification
+      showToast('Opening WhatsApp to chat with our staff...', 'success');
+    }
+  </script>
+
+  <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

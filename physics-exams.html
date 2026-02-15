@@ -1,0 +1,1946 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Exams - IG Nation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.css">
+    <style>
+    /* ✅ Your same styles kept exactly */
+    * { box-sizing: border-box; }
+    html, body { margin:0!important; padding:0!important; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#F8F8F8; min-height:100vh; }
+    .homework-header { background:rgba(255,255,255,0.95); backdrop-filter:blur(20px); box-shadow:0 8px 32px rgba(0,0,0,0.1); border-bottom:1px solid rgba(255,255,255,0.2); padding:1rem 2rem; position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; justify-content:space-between; align-items:center; }
+    .homework-logo { display:flex; align-items:center; text-decoration:none; color:#333; margin-left: 70px; }
+    .homework-logo img { height:40px; filter:drop-shadow(0 2px 4px rgba(0,0,0,.1)); transition:.3s; }
+    .homework-logo:hover img { transform:scale(1.05); }
+    .subject-badge { background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); color:white; padding:.25rem .75rem; border-radius:20px; font-size:.8rem; font-weight:600; margin-left:1rem; }
+    .homework-nav { display:flex; gap:1rem; align-items:center; }
+    .nav-btn { background:white; border:1px solid #e9ecef; border-radius:8px; padding:.5rem 1rem; color:#333; text-decoration:none; font-weight:500; transition:.3s; display:flex; align-items:center; gap:.5rem; }
+    .nav-btn:hover { background:#667eea; color:white; transform:translateY(-2px); box-shadow:0 4px 12px rgba(102,126,234,0.3); }
+    .main-content { margin-top:100px; padding:2rem; }
+    .homework-hero { 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 1.5rem 2.5rem;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 20px rgba(102, 126, 234, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .homework-hero::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+    .homework-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+    .hero-left {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-left h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 0.35rem 0;
+      letter-spacing: -0.5px;
+    }
+    .hero-left p {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+            margin: 0;
+      font-weight: 400;
+    }
+    .homework-stats { 
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .stat-item { 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+      padding: 1rem 1.75rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    .stat-item:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-3px);
+    }
+    .stat-number { 
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+    }
+    .stat-label { 
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .homework-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:2rem; margin-bottom:2rem; }
+    .homework-card { background:white; border-radius:12px; padding:2rem; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition:.3s; border-left:4px solid #667eea; }
+    .homework-card:hover { transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,0.12); }
+    .homework-card-header { display:flex; align-items:center; margin-bottom:1rem; }
+    .homework-icon { width:50px; height:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; margin-right:1rem; font-size:1.5rem; color:white; background:linear-gradient(135deg,#f59e0b 0%,#d97706 100%); }
+    .homework-card-title { font-size:1.25rem; font-weight:700; color:#333; margin-bottom:.5rem; }
+    .homework-card-description { color:#666; margin-bottom:1.5rem; line-height:1.6; }
+    .homework-details { background:#f8f9fa; border-radius:8px; padding:1rem; margin-bottom:1.5rem; }
+    .detail-row { display:flex; justify-content:space-between; margin-bottom:.5rem; }
+    .detail-label { font-weight:600; color:#333; }
+    .detail-value { color:#666; }
+    .homework-actions { display:flex; gap:1rem; }
+    .btn-primary { background:linear-gradient(135deg,#f59e0b 0%,#d97706 100%); border:none; border-radius:8px; padding:.75rem 1.5rem; color:white; font-weight:600; transition:.3s; flex:1; }
+    .btn-primary:hover { transform:translateY(-2px); box-shadow:0 4px 12px rgba(245,158,11,0.3); }
+    .btn-outline { background:transparent; border:2px solid #f59e0b; border-radius:8px; padding:.75rem 1.5rem; color:#f59e0b; font-weight:600; transition:.3s; flex:1; }
+    .btn-outline:hover { background:#f59e0b; color:white; }
+    .status-badge { display:inline-block; padding:.25rem .75rem; border-radius:20px; font-size:.8rem; font-weight:600; margin-bottom:1rem; }
+    .status-pending { background:#fff3cd; color:#856404; }
+    .status-completed { background:#d4edda; color:#155724; }
+    .status-overdue { background:#f8d7da; color:#721c24; }
+    .status-upcoming { background:#d1ecf1; color:#0c5460; }
+    .status-locked { background:#f8d7da; color:#721c24; }
+    
+    .file-badge {
+        background: #10b981;
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        margin-left: 0.5rem;
+    }
+
+    .exam-file-info {
+        background: #f8f9fa;
+        padding: 0.75rem;
+        border-radius: 8px;
+        margin: 0.75rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #64748b;
+        font-size: 0.9rem;
+        border-left: 3px solid #10b981;
+    }
+
+    .exam-file-info iconify-icon {
+        color: #10b981;
+    }
+    .homework-filters { 
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      border-radius: 12px; 
+      padding: 1rem; 
+      margin-bottom: 1.5rem; 
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06); 
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .homework-filters::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+    }
+    
+    /* Header Section */
+    .filters-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #f1f3f4;
+    }
+    
+    .filters-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .filters-title h3 {
+      margin: 0;
+      color: #2c3e50;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    
+    .filters-icon {
+      font-size: 1.2rem;
+      color: #667eea;
+    }
+    
+    .filter-stats {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    /* Controls Section */
+    .filters-controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .search-section {
+      min-width: 200px;
+      max-width: 300px;
+    }
+    
+    .search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    
+    .search-box:focus-within {
+      border-color: #667eea;
+      box-shadow: 0 4px 16px rgba(102, 126, 234, 0.15);
+    }
+    
+    .search-icon {
+      color: #6c757d;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+    }
+    
+    .search-input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 0.9rem;
+      color: #2c3e50;
+    }
+    
+    .search-input::placeholder {
+      color: #adb5bd;
+    }
+    
+    .search-clear {
+      background: none;
+      border: none;
+      color: #6c757d;
+      cursor: pointer;
+      padding: 0.25rem;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    
+    .search-clear:hover {
+      background: #f8f9fa;
+      color: #495057;
+    }
+    
+    .sort-section {
+      min-width: 160px;
+    }
+    
+    .sort-dropdown {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 0.5rem 0.75rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    
+    .sort-dropdown:hover {
+      border-color: #667eea;
+      box-shadow: 0 4px 16px rgba(102, 126, 234, 0.15);
+    }
+    
+    .sort-icon {
+      color: #6c757d;
+      font-size: 1rem;
+    }
+    
+    .sort-label {
+      color: #6c757d;
+      font-weight: 500;
+      font-size: 0.8rem;
+    }
+    
+    .sort-selector {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      cursor: pointer;
+      flex: 1;
+    }
+    
+    .sort-value {
+      color: #2c3e50;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    
+    .sort-arrow {
+      color: #6c757d;
+      font-size: 0.9rem;
+      transition: transform 0.2s ease;
+    }
+    
+    .sort-selector:hover .sort-arrow {
+      transform: rotate(180deg);
+    }
+    
+    .sort-clear {
+      background: none;
+      border: none;
+      color: #6c757d;
+      cursor: pointer;
+      padding: 0.25rem;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    
+    .sort-clear:hover {
+      background: #f8f9fa;
+      color: #495057;
+    }
+    
+    /* Category Filters */
+    .category-filters {
+      margin-bottom: 1rem;
+    }
+    
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      gap: 1rem;
+    }
+    
+    .category-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #2c3e50;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    
+    .category-icon {
+      color: #667eea;
+      font-size: 1.1rem;
+    }
+    
+    .filter-tabs { 
+      display: flex; 
+      gap: 0.5rem; 
+      flex-wrap: wrap;
+    }
+    
+    .filter-tab { 
+      padding: 0.5rem 1rem; 
+      border: 1px solid #e9ecef; 
+      background: white; 
+      color: #6c757d; 
+      font-weight: 500; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: all 0.3s ease;
+      font-size: 0.8rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .filter-tab::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: left 0.5s;
+    }
+    
+    .filter-tab:hover::before {
+      left: 100%;
+    }
+    
+    .filter-tab:hover {
+      border-color: #667eea;
+      color: #667eea;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.15);
+    }
+    
+    .filter-tab.active {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-color: #667eea;
+      color: white;
+      box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+    }
+    
+    .filter-tab.active::before {
+      display: none;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .filters-controls {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .sort-section {
+        min-width: auto;
+        width: 100%;
+      }
+      
+      .category-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+      }
+      
+      .search-section {
+        min-width: auto;
+        width: 100%;
+      }
+    }
+    
+    /* Question Modal Styles */
+    .question-card { background:white; border-radius:12px; padding:2rem; margin-bottom:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+    .question-text { font-size:1.1rem; font-weight:600; margin-bottom:1.5rem; color:#333; }
+    .question-options { margin-bottom:1.5rem; }
+    .option-item { display:flex; align-items:center; margin-bottom:1rem; padding:1rem; border:2px solid #e9ecef; border-radius:8px; cursor:pointer; transition:.3s; }
+    .option-item:hover { border-color:#667eea; background:#f8f9ff; }
+    .option-item.selected { border-color:#667eea; background:#f0f4ff; }
+    .option-radio { margin-right:1rem; }
+    .option-text { flex:1; font-size:1rem; }
+    .question-navigation { display:flex; justify-content:space-between; align-items:center; }
+    .progress-bar { background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); }
+    .timer { font-weight:600; color:#667eea; }
+    
+    /* Page Timer Styles */
+    .page-timer {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+      border-radius: 12px;
+      padding: 15px 20px;
+      box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+      min-width: 200px;
+      animation: slideInRight 0.3s ease-out;
+    }
+    
+    .timer-clock {
+            display: flex;
+            align-items: center;
+      gap: 12px;
+    }
+    
+    .timer-icon {
+      font-size: 24px;
+      opacity: 0.9;
+    }
+    
+    .timer-content {
+      flex: 1;
+    }
+    
+    .timer-label {
+      font-size: 12px;
+      opacity: 0.8;
+      margin-bottom: 2px;
+    }
+    
+    .timer-display {
+      font-size: 18px;
+            font-weight: 700;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .timer-progress {
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 2px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+    
+    .timer-progress-bar {
+      height: 100%;
+      background: #fff;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+      width: 100%;
+    }
+    
+    .timer-progress-bar.warning { background: #ffc107; }
+    .timer-progress-bar.danger { background: #dc3545; }
+    
+    @keyframes slideInRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .timer-warning { animation: pulse 1s infinite; }
+    
+    /* Autocorrect Styles */
+    .correct-answer {
+      border-color: #28a745 !important;
+      background: #d4edda !important;
+    }
+    
+    .correct-selected {
+      border-color: #28a745 !important;
+      background: #d4edda !important;
+      box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25) !important;
+    }
+    
+    .incorrect-selected {
+      border-color: #dc3545 !important;
+      background: #f8d7da !important;
+      box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25) !important;
+    }
+    
+    .option-item.disabled {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    
+    /* Question Action Buttons */
+    .question-actions {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+    }
+    
+    .action-buttons {
+            display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .action-buttons .btn {
+      display: flex;
+            align-items: center;
+      gap: 5px;
+      font-size: 0.875rem;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    
+    .action-buttons .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    
+    .action-buttons .btn-outline-primary:hover {
+      background: #007bff;
+      color: white;
+    }
+    
+    .action-buttons .btn-outline-success:hover {
+      background: #28a745;
+      color: white;
+    }
+    
+    .action-buttons .btn-outline-warning:hover {
+      background: #ffc107;
+      color: #212529;
+    }
+    
+    /* Review Modal Styles */
+    .assignment-review { background: white; }
+    .review-header { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+    
+    /* Modern Question Review Styles */
+    .question-review-item { 
+      background: white; 
+      border: none; 
+      border-radius: 12px; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+      margin-bottom: 2rem; 
+      padding: 2rem; 
+    }
+    
+    .question-text { 
+      font-size: 1.1rem; 
+      font-weight: 600; 
+      color: #333; 
+            margin-bottom: 1.5rem;
+      line-height: 1.6; 
+    }
+    
+    .answer-option { 
+      background: #f8f9fa; 
+      border: 2px solid #e9ecef; 
+      border-radius: 8px; 
+      padding: 1rem; 
+      margin-bottom: 0.75rem; 
+      cursor: default; 
+      transition: all 0.2s ease; 
+            display: flex;
+      align-items: center; 
+      gap: 0.75rem; 
+    }
+    
+    .answer-option.correct { 
+      background: #d4edda; 
+      border-color: #28a745; 
+      color: #155724; 
+    }
+    
+    .answer-option.incorrect { 
+      background: #f8d7da; 
+      border-color: #dc3545; 
+      color: #721c24; 
+    }
+    
+    .answer-option.user-selected { 
+      border-width: 3px; 
+      font-weight: 600; 
+    }
+    
+    .option-radio { 
+      width: 18px; 
+      height: 18px; 
+      border: 2px solid #6c757d; 
+      border-radius: 50%; 
+            display: flex;
+      align-items: center; 
+      justify-content: center; 
+      flex-shrink: 0; 
+    }
+    
+    .option-radio.checked { 
+      background: #007bff; 
+      border-color: #007bff; 
+    }
+    
+    .option-radio.checked::after { 
+      content: ''; 
+      width: 8px; 
+      height: 8px; 
+      background: white; 
+      border-radius: 50%; 
+    }
+    
+    .option-radio.correct { 
+      background: #28a745; 
+      border-color: #28a745; 
+    }
+    
+    .option-radio.incorrect { 
+      background: #dc3545; 
+      border-color: #dc3545; 
+    }
+    
+    .points-display { 
+      color: #6c757d; 
+      font-size: 0.9rem; 
+      font-weight: 500; 
+    }
+    
+    .answer-content { font-family: monospace; white-space: pre-wrap; background: white; }
+    .teacher-comments .answer-content { background: #e3f2fd; border-left: 4px solid #2196f3; }
+    .sample-answer .answer-content { background: #e8f5e8; border-left: 4px solid #4caf50; }
+    
+    /* Notification Styles */
+    .notification {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      animation: slideDown 0.3s ease-out;
+    }
+    
+    .notification-success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .notification-info {
+      background: #d1ecf1;
+      color: #0c5460;
+      border: 1px solid #bee5eb;
+    }
+    
+    .notification-content {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    @keyframes slideDown {
+      from { transform: translateX(-50%) translateY(-100%); opacity: 0; }
+      to { transform: translateX(-50%) translateY(0); opacity: 1; }
+    }
+    
+    /* Responsive Design for Hero and Filters */
+        @media (max-width: 768px) {
+      .homework-hero {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1.25rem;
+      }
+      .homework-title {
+        font-size: 1.75rem;
+      }
+      .homework-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.25rem;
+      }
+      .homework-stats {
+        gap: 1.25rem;
+        margin-top: 1.25rem;
+      }
+      .stat-item {
+        min-width: 90px;
+        padding: 0.6rem;
+      }
+      .stat-number {
+        font-size: 1.4rem;
+      }
+      .stat-label {
+        font-size: 0.75rem;
+      }
+      
+      .homework-filters {
+                padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      .filters-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+      }
+      .filter-tabs {
+        justify-content: center;
+        gap: 0.25rem;
+        margin-top: 1rem;
+      }
+      .filter-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+      }
+      .search-box {
+        max-width: 100%;
+        min-width: auto;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .homework-hero {
+        padding: 1.25rem 0.75rem;
+      }
+      .homework-title {
+        font-size: 1.5rem;
+      }
+      .homework-stats {
+        gap: 0.75rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .stat-item {
+        width: 100%;
+        max-width: 180px;
+        padding: 0.5rem;
+      }
+      .filter-tabs {
+        flex-direction: column;
+        width: 100%;
+      }
+      .filter-tab {
+        text-align: center;
+        width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button - Fixed Position -->
+    <button class="back-button" onclick="history.back()" title="Back" style="position: fixed !important; top: 19px !important; left: 20px !important; z-index: 1001 !important; background: rgba(255, 255, 255, 0.95); border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(10px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 1)'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.15)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.95)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.1)'">
+      <iconify-icon icon="material-symbols:arrow-back" style="font-size: 1.5rem; color: #667eea;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m7.825 13l5.6 5.6L12 20l-8-8l8-8l1.425 1.4l-5.6 5.6H20v2z"></path></svg></template></iconify-icon>
+    </button>
+
+    <!-- Header -->
+  <div class="homework-header">
+    <a class="homework-logo" href="/physics-dashboard">
+      <img src="images/ig-nation-logo-graduation.png" alt="IG Nation">
+    </a>
+    <div class="homework-nav">
+      <a class="nav-btn" href="./physics-homework.html"><iconify-icon icon="material-symbols:assignment"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h4.2q.325-.9 1.088-1.45T12 1t1.713.55T14.8 3H19q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm2-4h7v-2H7zm0-4h10v-2H7zm0-4h10V7H7zm5.538-4.962q.212-.213.212-.538t-.213-.537T12 2.75t-.537.213t-.213.537t.213.538t.537.212t.538-.213"></path></svg></template></iconify-icon>Assignments</a>
+      <a class="nav-btn" href="./physics-exams.html"><iconify-icon icon="material-symbols:quiz"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M14.738 14.688q.312-.313.312-.738t-.312-.737T14 12.9t-.737.313t-.313.737t.313.738T14 15t.738-.312M13.25 11.8h1.5q0-.725.15-1.062t.7-.888q.75-.75 1-1.212t.25-1.088q0-1.125-.788-1.837T14 5q-1.025 0-1.787.575T11.15 7.1l1.35.55q.225-.625.613-.937T14 6.4q.6 0 .975.338t.375.912q0 .35-.2.663t-.7.787q-.825.725-1.012 1.138T13.25 11.8M8 18q-.825 0-1.412-.587T6 16V4q0-.825.588-1.412T8 2h12q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18zm-4 4q-.825 0-1.412-.587T2 20V6h2v14h14v2z"></path></svg></template></iconify-icon>Quizzes</a>
+      <a class="assistant-btn" href="/course-assistants-chat?course=physics" onmouseout="this.style.transform=\" translatey(0)\';="" this.style.boxshadow="\'0" 4px="" 15px="" rgba(102,="" 126,="" 234,="" 0.3)\''="" onmouseover="this.style.transform=\" translatey(-3px)\';="" 6px="" 20px="" 0.4)\''="" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 25px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); display: flex; align-items: center; gap: 0.5rem;"><iconify-icon icon="material-symbols:chat"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M2 22V4q0-.825.588-1.412T4 2h16q.825 0 1.413.588T22 4v12q0 .825-.587 1.413T20 18H6zm4-8h8v-2H6zm0-3h12V9H6zm0-3h12V6H6z"></path></svg></template></iconify-icon>Ask Assistant</a>
+            </div>
+        </div>
+
+  <!-- Main -->
+  <div class="main-content">
+    <div class="homework-hero">
+      <div class="hero-left">
+        <h2>Physics Exams</h2>
+        <p>Comprehensive examinations and assessments</p>
+      </div>
+      <div class="homework-stats">
+        <div class="stat-item">
+          <div class="stat-number" id="totalExams">0</div>
+          <div class="stat-label">Total</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" id="upcomingExams">0</div>
+          <div class="stat-label">Pending</div>
+        </div>
+      </div>
+        </div>
+
+    <!-- Filters -->
+    <div class="homework-filters">
+      <!-- Header Section -->
+      <div class="filters-header">
+        <div class="filters-title">
+          <iconify-icon icon="material-symbols:tune" class="filters-icon"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 21v-6h2v2h8v2h-8v2zm-8-2v-2h6v2zm4-4v-2H3v-2h4V9h2v6zm4-2v-2h10v2zm4-4V3h2v2h4v2h-4v2zM3 7V5h10v2z"></path></svg></template></iconify-icon>
+          <h3>Exam Filters</h3>
+        </div>
+        <div class="filter-stats">
+        </div>
+      </div>
+
+      <!-- Sort Section -->
+      <div class="filters-controls">
+        <div class="sort-section">
+          <div class="sort-dropdown">
+            <iconify-icon icon="material-symbols:sort" class="sort-icon"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18v-2h6v2zm0-5v-2h12v2zm0-5V6h18v2z"></path></svg></template></iconify-icon>
+            <span class="sort-label">Sort by:</span>
+            <div class="sort-selector" onclick="showSortOptions()">
+              <span class="sort-value" id="currentSort">Date (Earliest First)</span>
+              <iconify-icon icon="material-symbols:keyboard-arrow-down" class="sort-arrow"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"></path></svg></template></iconify-icon>
+            </div>
+            <button class="sort-clear" onclick="clearSort()" id="sortClearBtn" style="display: none;">
+              <iconify-icon icon="material-symbols:close"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"></path></svg></template></iconify-icon>
+            </button>
+          </div>
+        </div>
+        <div class="search-section">
+          <div class="search-box">
+            <iconify-icon icon="material-symbols:search" class="search-icon"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"></path></svg></template></iconify-icon>
+            <input type="text" class="search-input" placeholder="Search exams..." id="examSearch">
+            <button class="search-clear" onclick="clearSearch()" id="searchClearBtn" style="display: none;">
+              <iconify-icon icon="material-symbols:close"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"></path></svg></template></iconify-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Category Filters -->
+      <div class="category-filters">
+        <div class="category-header">
+          <div class="category-title">
+            <iconify-icon icon="material-symbols:category" class="category-icon"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 11L12 2l5.5 9zm11 11q-1.875 0-3.187-1.312T13 17.5t1.313-3.187T17.5 13t3.188 1.313T22 17.5t-1.312 3.188T17.5 22M3 21.5v-8h8v8z"></path></svg></template></iconify-icon>
+            <span>Categories</span>
+          </div>
+        </div>
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" onclick="filterExams('all',event)">
+            <iconify-icon icon="material-symbols:apps"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M4.588 19.413Q4 18.825 4 18t.588-1.412T6 16t1.413.588T8 18t-.587 1.413T6 20t-1.412-.587m6 0Q10 18.825 10 18t.588-1.412T12 16t1.413.588T14 18t-.587 1.413T12 20t-1.412-.587m6 0Q16 18.825 16 18t.588-1.412T18 16t1.413.588T20 18t-.587 1.413T18 20t-1.412-.587m-12-6Q4 12.825 4 12t.588-1.412T6 10t1.413.588T8 12t-.587 1.413T6 14t-1.412-.587m6 0Q10 12.825 10 12t.588-1.412T12 10t1.413.588T14 12t-.587 1.413T12 14t-1.412-.587m6 0Q16 12.825 16 12t.588-1.412T18 10t1.413.588T20 12t-.587 1.413T18 14t-1.412-.587m-12-6Q4 6.825 4 6t.588-1.412T6 4t1.413.588T8 6t-.587 1.413T6 8t-1.412-.587m6 0Q10 6.825 10 6t.588-1.412T12 4t1.413.588T14 6t-.587 1.413T12 8t-1.412-.587m6 0Q16 6.825 16 6t.588-1.412T18 4t1.413.588T20 6t-.587 1.413T18 8t-1.412-.587"></path></svg></template></iconify-icon>
+            All Exams
+          </button>
+          <button class="filter-tab" onclick="filterExams('pending',event)">
+            <iconify-icon icon="material-symbols:schedule"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m15.3 16.7l1.4-1.4l-3.7-3.7V7h-2v5.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"></path></svg></template></iconify-icon>
+            Pending
+          </button>
+          <button class="filter-tab" onclick="filterExams('completed',event)">
+            <iconify-icon icon="material-symbols:check-circle"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m10.6 16.6l7.05-7.05l-1.4-1.4l-5.65 5.65l-2.85-2.85l-1.4 1.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"></path></svg></template></iconify-icon>
+            Completed
+          </button>
+          <button class="filter-tab" onclick="filterExams('locked',event)">
+            <iconify-icon icon="material-symbols:lock"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M6 22q-.825 0-1.412-.587T4 20V10q0-.825.588-1.412T6 8h1V6q0-2.075 1.463-3.537T12 1t3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.587 1.413T18 22zm7.413-5.587Q14 15.825 14 15t-.587-1.412T12 13t-1.412.588T10 15t.588 1.413T12 17t1.413-.587M9 8h6V6q0-1.25-.875-2.125T12 3t-2.125.875T9 6z"></path></svg></template></iconify-icon>
+            Locked
+          </button>
+        </div>
+      </div>
+      
+      <!-- Hidden sort select for functionality -->
+      <select id="sortSelect" style="display: none;" onchange="sortExams()">
+        <option value="date-asc">Date (Earliest First)</option>
+        <option value="date-desc">Date (Latest First)</option>
+        <option value="title-asc">Title (A-Z)</option>
+        <option value="title-desc">Title (Z-A)</option>
+        <option value="duration-asc">Duration (Short to Long)</option>
+        <option value="duration-desc">Duration (Long to Short)</option>
+        <option value="questions-asc">Questions (Few to Many)</option>
+        <option value="questions-desc">Questions (Many to Few)</option>
+      </select>
+    </div>
+                    
+    <div class="homework-grid" id="examGrid"><div class="col-12 text-center py-5"><h4>No exams available</h4><p class="text-muted">Check back later for new exams or contact your teacher.</p></div></div>
+                    </div>
+                    
+  <!-- Question Viewing Modal -->
+  <div class="modal fade" id="questionModal" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="questionModalTitle">Exam Questions</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+        <div class="modal-body">
+          <div class="question-progress mb-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="text-muted">Question <span id="currentQuestionNum">1</span> of <span id="totalQuestions">0</span></span>
+              <div class="timer-container">
+                <span class="text-muted">Time: <span id="timer" class="timer">00:00</span></span>
+                <span id="timeLimitInfo" class="text-muted ms-2" style="display: none;">/ <span id="timeLimit">60</span> min</span>
+                        </div>
+                        </div>
+            <div class="progress">
+              <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+            </div>
+            <div id="timeProgress" class="mt-2" style="display: none;">
+              <div class="progress" style="height: 6px;">
+                <div class="progress-bar bg-warning" id="timeProgressBar" style="width: 100%"></div>
+              </div>
+                        </div>
+                    </div>
+                    
+          <div id="questionContainer">
+            <!-- Questions will be loaded here -->
+                            </div>
+          
+          <div class="question-navigation mt-4">
+            <button class="btn btn-outline-secondary" id="prevBtn" onclick="previousQuestion()" disabled="">
+              <iconify-icon icon="material-symbols:arrow-back"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m7.825 13l5.6 5.6L12 20l-8-8l8-8l1.425 1.4l-5.6 5.6H20v2z"></path></svg></template></iconify-icon>
+              Previous
+            </button>
+            <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">
+              Next
+              <iconify-icon icon="material-symbols:arrow-forward"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+            </button>
+            <button class="btn btn-success" id="submitBtn" onclick="submitExam()" style="display: none;">
+              <iconify-icon icon="material-symbols:check"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"></path></svg></template></iconify-icon>
+              Submit Exam
+            </button>
+                            </div>
+                        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  <script>
+    let exams = [];
+    let currentFilter = 'all';
+
+    // Load Physics exams from localStorage (published by teachers)
+    let physicsExams = JSON.parse(localStorage.getItem('physicsExams') || '[]');
+    
+    // Sample exam data to make exams accessible
+    const sampleExams = [
+      {
+        id: 'exam_1',
+        title: 'Physics Fundamentals Exam',
+        description: 'Comprehensive exam covering basic physics concepts including mechanics, thermodynamics, and waves.',
+        dueDate: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+        time: '09:00',
+        duration: 120,
+        status: 'pending',
+        difficulty: 'Medium',
+        points: 100,
+        questions: [
+          {
+            id: 'q1',
+            text: 'What is the SI unit of force?',
+            type: 'multiple-choice',
+            options: ['Newton', 'Joule', 'Watt', 'Pascal'],
+            correctAnswer: 0,
+            points: 10,
+            difficulty: 'Easy',
+            topic: 'Mechanics'
+          },
+          {
+            id: 'q2',
+            text: 'Which law states that energy cannot be created or destroyed?',
+            type: 'multiple-choice',
+            options: ['First Law of Thermodynamics', 'Second Law of Thermodynamics', 'Law of Conservation of Energy', 'Ohm\'s Law'],
+            correctAnswer: 2,
+            points: 10,
+            difficulty: 'Easy',
+            topic: 'Thermodynamics'
+          },
+          {
+            id: 'q3',
+            text: 'What is the speed of light in vacuum?',
+            type: 'multiple-choice',
+            options: ['3 × 10⁶ m/s', '3 × 10⁸ m/s', '3 × 10¹⁰ m/s', '3 × 10¹² m/s'],
+            correctAnswer: 1,
+            points: 10,
+            difficulty: 'Easy',
+            topic: 'Waves'
+          },
+          {
+            id: 'q4',
+            text: 'Which particle has no charge?',
+            type: 'multiple-choice',
+            options: ['Proton', 'Electron', 'Neutron', 'Alpha particle'],
+            correctAnswer: 2,
+            points: 10,
+            difficulty: 'Medium',
+            topic: 'Atomic Physics'
+          },
+          {
+            id: 'q5',
+            text: 'What is the relationship between frequency and wavelength?',
+            type: 'multiple-choice',
+            options: ['Directly proportional', 'Inversely proportional', 'No relationship', 'Exponentially related'],
+            correctAnswer: 1,
+            points: 10,
+            difficulty: 'Medium',
+            topic: 'Waves'
+          }
+        ]
+      },
+      {
+        id: 'exam_2',
+        title: 'Advanced Physics Concepts',
+        description: 'Challenging exam covering advanced physics topics including quantum mechanics and relativity.',
+        dueDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+        time: '14:00',
+        duration: 180,
+        status: 'pending',
+        difficulty: 'Hard',
+        points: 150,
+        questions: [
+          {
+            id: 'q6',
+            text: 'What is the uncertainty principle?',
+            type: 'multiple-choice',
+            options: ['Energy and time cannot be measured simultaneously', 'Position and momentum cannot be measured simultaneously', 'Mass and velocity are inversely related', 'Charge and field strength are proportional'],
+            correctAnswer: 1,
+            points: 15,
+            difficulty: 'Hard',
+            topic: 'Quantum Mechanics'
+          },
+          {
+            id: 'q7',
+            text: 'What happens to time in a strong gravitational field?',
+            type: 'multiple-choice',
+            options: ['Time speeds up', 'Time slows down', 'Time stops', 'Time becomes negative'],
+            correctAnswer: 1,
+            points: 15,
+            difficulty: 'Hard',
+            topic: 'Relativity'
+          },
+          {
+            id: 'q8',
+            text: 'What is the photoelectric effect?',
+            type: 'multiple-choice',
+            options: ['Emission of electrons when light hits a metal', 'Absorption of light by atoms', 'Reflection of light from surfaces', 'Refraction of light through materials'],
+            correctAnswer: 0,
+            points: 15,
+            difficulty: 'Medium',
+            topic: 'Quantum Mechanics'
+          }
+        ]
+      },
+      {
+        id: 'exam_3',
+        title: 'Physics Problem Solving',
+        description: 'Practical exam focusing on problem-solving skills and mathematical applications.',
+        dueDate: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+        time: '10:30',
+        duration: 90,
+        status: 'pending',
+        difficulty: 'Medium',
+        points: 80,
+        questions: [
+          {
+            id: 'q9',
+            text: 'A car accelerates from rest at 2 m/s² for 10 seconds. What is its final velocity?',
+            type: 'multiple-choice',
+            options: ['5 m/s', '10 m/s', '20 m/s', '40 m/s'],
+            correctAnswer: 2,
+            points: 20,
+            difficulty: 'Medium',
+            topic: 'Kinematics'
+          },
+          {
+            id: 'q10',
+            text: 'What is the kinetic energy of a 2 kg object moving at 5 m/s?',
+            type: 'multiple-choice',
+            options: ['10 J', '25 J', '50 J', '100 J'],
+            correctAnswer: 1,
+            points: 20,
+            difficulty: 'Medium',
+            topic: 'Energy'
+          }
+        ]
+      }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('Page loaded, starting exam loading...');
+      
+      // Only clear data on first visit (if flag doesn't exist)
+      if (!localStorage.getItem('physicsAcademicDataCleared')) {
+        clearPhysicsAcademicData();
+        localStorage.setItem('physicsAcademicDataCleared', 'true');
+      }
+      
+      loadExams();
+      updateStats();
+      document.getElementById('examSearch').addEventListener('input', searchExams);
+    });
+    
+    // Function to clear all quizzes, assignments, and exams
+    function clearPhysicsAcademicData() {
+        console.log('🧹 Starting to clear physics academic data...');
+        
+        // Clear quizzes
+        localStorage.removeItem('physicsQuizzes');
+        localStorage.removeItem('physicsTeacherQuizzes');
+        localStorage.removeItem('physicsQuizzesList');
+        
+        // Clear assignments (homeworks)
+        localStorage.removeItem('physicsAssignments');
+        localStorage.removeItem('physicsTeacherAssignments');
+        localStorage.removeItem('physicsAssignmentsList');
+        
+        // Clear exams
+        localStorage.removeItem('physicsExams');
+        localStorage.removeItem('physicsTeacherExams');
+        localStorage.removeItem('physicsExamsList');
+        
+        // Clear assessments (used by the new system)
+        localStorage.removeItem('physicsAssessments');
+        
+        console.log('✅ Cleared all physics quizzes, assignments, and exams from localStorage');
+    }
+
+    function loadExams() {
+      // Reload exams from localStorage to get latest published exams
+      physicsExams = JSON.parse(localStorage.getItem('physicsExams') || '[]');
+      
+      console.log('Loaded physicsExams from localStorage:', physicsExams);
+      console.log('Number of exams found:', physicsExams.length);
+      
+      // Log details of each exam
+      physicsExams.forEach((exam, index) => {
+        console.log(`Exam ${index + 1} details:`, {
+          id: exam.id,
+          title: exam.title,
+          status: exam.status,
+          score: exam.score,
+          totalPoints: exam.totalPoints,
+          points: exam.points,
+          percentage: exam.percentage,
+          completed: exam.completed
+        });
+      });
+      
+      // Don't use sample data - only show real exams
+      const examsToUse = physicsExams;
+
+      // Convert published exams to the format expected by the page
+      exams = examsToUse.map(exam => {
+        // Handle both standard and published exam formats
+        const title = exam.title || exam.name || 'Untitled Exam';
+        const description = exam.description || exam.desc || 'No description available';
+        const dueDate = exam.dueDate || exam.date || new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+        const time = exam.time || '09:00';
+        const duration = exam.timeLimit || exam.duration || 120;
+        // Only keep 'completed' status, otherwise default to 'pending' for available exams
+        const status = (exam.status === 'completed') ? 'completed' : 'pending';
+        const difficulty = exam.difficulty || 'Medium';
+        const points = exam.points || exam.totalPoints || 100;
+        const questions = exam.questions || [];
+        
+        return {
+          id: exam.id,
+          title: title,
+          description: description,
+          date: dueDate,
+          time: time,
+          duration: duration,
+          status: status,
+          difficulty: difficulty,
+          points: points,
+          questions: questions,
+          // Check if it's a file-based exam
+          assessmentType: exam.assessmentType,
+          fileBased: exam.fileBased,
+          // Preserve completed exam data
+          score: exam.score,
+          totalPoints: exam.totalPoints,
+          percentage: exam.percentage,
+          completedAt: exam.completedAt || exam.submittedAt
+        };
+      });
+
+      let list = exams;
+      if (currentFilter !== 'all') {
+        list = exams.filter(e => e.status === currentFilter);
+      }
+
+      // Apply current sorting
+      const sortValue = document.getElementById('sortSelect')?.value || 'date-asc';
+      switch(sortValue) {
+        case 'date-asc':
+          list.sort((a, b) => new Date(a.date) - new Date(b.date));
+          break;
+        case 'date-desc':
+          list.sort((a, b) => new Date(b.date) - new Date(a.date));
+          break;
+        case 'title-asc':
+          list.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+          break;
+        case 'title-desc':
+          list.sort((a, b) => (b.title || '').localeCompare(a.title || ''));
+          break;
+        case 'duration-asc':
+          list.sort((a, b) => (a.duration || 0) - (b.duration || 0));
+          break;
+        case 'duration-desc':
+          list.sort((a, b) => (b.duration || 0) - (a.duration || 0));
+          break;
+        case 'questions-asc':
+          list.sort((a, b) => (a.questions || 0) - (b.questions || 0));
+          break;
+        case 'questions-desc':
+          list.sort((a, b) => (b.questions || 0) - (a.questions || 0));
+          break;
+      }
+
+      console.log('Filtered and sorted exams:', list);
+      console.log('Number of exams to display:', list.length);
+      
+      updateExamDisplay(list);
+      updateSortDisplay();
+    }
+
+    function filterExams(status, ev) {
+      currentFilter = status;
+      document.querySelectorAll('.filter-tab').forEach(tab => tab.classList.remove('active'));
+      ev.target.classList.add('active');
+      updateFilterCount();
+      loadExams();
+    }
+    
+    function updateFilterCount() {
+      const filtered = currentFilter === 'all' ? exams : exams.filter(e => e.status === currentFilter);
+      const filterCountEl = document.getElementById('filterCount');
+      if (filterCountEl) {
+        filterCountEl.textContent = filtered.length;
+      }
+    }
+    
+    function updateSortDisplay() {
+      const sortSelect = document.getElementById('sortSelect');
+      const currentSort = document.getElementById('currentSort');
+      const sortClearBtn = document.getElementById('sortClearBtn');
+      
+      if (sortSelect) {
+        const sortValue = sortSelect.value;
+        const sortText = sortSelect.options[sortSelect.selectedIndex].text;
+        currentSort.textContent = sortText;
+        
+        // Show clear button if not on default sort
+        if (sortValue !== 'date-asc') {
+          sortClearBtn.style.display = 'inline-flex';
+        } else {
+          sortClearBtn.style.display = 'none';
+        }
+      }
+    }
+    
+    function clearSort() {
+      const sortSelect = document.getElementById('sortSelect');
+      if (sortSelect) {
+        sortSelect.value = 'date-asc';
+        updateSortDisplay();
+        sortExams();
+      }
+    }
+    
+    function showSortOptions() {
+      const sortSelect = document.getElementById('sortSelect');
+      if (sortSelect) {
+        // Create a simple dropdown menu
+        const options = [
+          { value: 'date-asc', text: 'Date (Earliest First)' },
+          { value: 'date-desc', text: 'Date (Latest First)' },
+          { value: 'title-asc', text: 'Title (A-Z)' },
+          { value: 'title-desc', text: 'Title (Z-A)' },
+          { value: 'duration-asc', text: 'Duration (Short to Long)' },
+          { value: 'duration-desc', text: 'Duration (Long to Short)' },
+          { value: 'questions-asc', text: 'Questions (Few to Many)' },
+          { value: 'questions-desc', text: 'Questions (Many to Few)' }
+        ];
+        
+        const currentValue = sortSelect.value;
+        const selectedIndex = options.findIndex(opt => opt.value === currentValue);
+        
+        // Cycle through options
+        const nextIndex = (selectedIndex + 1) % options.length;
+        sortSelect.value = options[nextIndex].value;
+        updateSortDisplay();
+        sortExams();
+      }
+    }
+
+    function sortExams() {
+      const sortValue = document.getElementById('sortSelect').value;
+      console.log('Sorting by:', sortValue);
+      
+      let list = [...exams];
+      
+      // Apply category filter first
+      if (currentFilter !== 'all') {
+        list = exams.filter(e => e.status === currentFilter);
+      }
+      
+      // Apply sorting
+      switch(sortValue) {
+        case 'date-asc':
+          list.sort((a, b) => new Date(a.date) - new Date(b.date));
+          break;
+        case 'date-desc':
+          list.sort((a, b) => new Date(b.date) - new Date(a.date));
+          break;
+        case 'title-asc':
+          list.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+          break;
+        case 'title-desc':
+          list.sort((a, b) => (b.title || '').localeCompare(a.title || ''));
+          break;
+        case 'duration-asc':
+          list.sort((a, b) => (a.duration || 0) - (b.duration || 0));
+          break;
+        case 'duration-desc':
+          list.sort((a, b) => (b.duration || 0) - (a.duration || 0));
+          break;
+        case 'questions-asc':
+          list.sort((a, b) => (a.questions || 0) - (b.questions || 0));
+          break;
+        case 'questions-desc':
+          list.sort((a, b) => (b.questions || 0) - (a.questions || 0));
+          break;
+      }
+      
+      // Update the display
+      updateExamDisplay(list);
+      updateSortDisplay();
+    }
+
+    function updateExamDisplay(list) {
+      const grid = document.getElementById('examGrid');
+      if (list.length === 0) {
+        grid.innerHTML = `<div class="col-12 text-center py-5"><h4>No exams available</h4><p class="text-muted">Check back later for new exams or contact your teacher.</p></div>`;
+        updateStats();
+        return;
+      }
+
+      grid.innerHTML = list.map(e => {
+        // Check if it's a file-based exam
+        const isFileBased = e.assessmentType === 'file-based' || e.fileBased;
+        const questionsCount = e.questions ? e.questions.length : 0;
+        
+        return `
+        <div class="homework-card">
+          <div class="homework-card-header">
+            <div class="homework-icon"><iconify-icon icon="material-symbols:school"></iconify-icon></div>
+            <div>
+              <div class="homework-card-title">${e.title}</div>
+              <span class="status-badge status-${e.status}">${e.status.toUpperCase()}</span>
+              ${isFileBased ? '<span class="file-badge"><iconify-icon icon="material-symbols:upload-file"></iconify-icon> File-Based</span>' : ''}
+            </div>
+          </div>
+          <div class="homework-card-description">${e.description}</div>
+          <div class="homework-details">
+            ${e.status === 'completed' ? `
+            ${(() => {
+              const score = e.finalScore || e.score || 0;
+              const totalPoints = e.points || e.totalPoints || 100;
+              let pointsEarned, percentage, gradeLetter;
+              
+              // If score is a percentage (0-100), convert to points
+              if (score <= 100 && score > 0 && totalPoints > 10) {
+                pointsEarned = Math.round((score / 100) * totalPoints);
+                percentage = Math.round(score);
+              } else {
+                // If score is already in points, calculate percentage
+                pointsEarned = score;
+                percentage = Math.round((score / totalPoints) * 100);
+              }
+              
+              // Determine grade letter
+              if (percentage >= 90) gradeLetter = 'A+';
+              else if (percentage >= 80) gradeLetter = 'A';
+              else if (percentage >= 70) gradeLetter = 'B';
+              else if (percentage >= 60) gradeLetter = 'C';
+              else if (percentage >= 50) gradeLetter = 'D';
+              else gradeLetter = 'F';
+              
+              return `
+              <div class="detail-row"><span class="detail-label">Points Scored:</span><span class="detail-value" style="color:#28a745;font-weight:600;">${pointsEarned} / ${totalPoints}</span></div>
+              <div class="detail-row"><span class="detail-label">Grade:</span><span class="detail-value" style="color:#28a745;font-weight:600;">${gradeLetter} (${percentage}%)</span></div>
+              <div class="detail-row"><span class="detail-label">Time Spent:</span><span class="detail-value">${e.timeSpent || 0} minutes</span></div>
+              `;
+            })()}
+            ` : `
+            <div class="detail-row"><span class="detail-label">Points:</span><span class="detail-value">${e.points || e.totalPoints || 100}</span></div>
+            <div class="detail-row"><span class="detail-label">Published on:</span><span class="detail-value">${(e.publishedOn || e.createdAt) ? new Date(e.publishedOn || e.createdAt).toLocaleDateString() : 'N/A'}</span></div>
+            <div class="detail-row"><span class="detail-label">Time:</span><span class="detail-value">${e.timeLimit || e.duration ? `${e.timeLimit || e.duration} minutes` : 'No time limit'}</span></div>
+            <div class="detail-row"><span class="detail-label">Due Date:</span><span class="detail-value">${e.dueDate ? new Date(e.dueDate).toLocaleDateString() : (e.date ? new Date(e.date).toLocaleDateString() : 'N/A')}</span></div>
+            `}
+          </div>
+          ${isFileBased && e.fileBased ? `
+          <div class="exam-file-info">
+            <iconify-icon icon="material-symbols:description"></iconify-icon>
+            <span>Question File: ${e.fileBased.questionFile.name}</span>
+          </div>
+          ` : ''}
+          <div class="homework-actions">
+            ${(e.status === 'pending' || e.status === 'available') ? `
+              <button class="btn btn-primary" onclick="startExam('${e.id}')">
+                <iconify-icon icon="material-symbols:play-arrow"></iconify-icon>
+                ${isFileBased ? 'Download & Start' : 'Start Exam'}
+              </button>
+            ` : e.status === 'completed' ? `
+              <button class="btn btn-outline" onclick="reviewExam('${e.id}')"><iconify-icon icon="material-symbols:visibility"></iconify-icon>Review</button>
+            ` : `
+              <button class="btn btn-outline" disabled><iconify-icon icon="material-symbols:lock"></iconify-icon>Locked</button>
+            `}
+          </div>
+        </div>
+        `;
+      }).join('');
+      updateStats();
+    }
+
+    function updateStats() {
+      const total = exams.length;
+      const upcoming = exams.filter(e => e.status === 'upcoming' || e.status === 'pending').length;
+      
+      const totalEl = document.getElementById('totalExams');
+      const upcomingEl = document.getElementById('upcomingExams');
+      
+      if (totalEl) {
+        totalEl.textContent = total;
+      }
+      if (upcomingEl) {
+        upcomingEl.textContent = upcoming;
+      }
+      
+      // Update filter count safely
+      updateFilterCount();
+    }
+
+    let currentExam = null;
+    let currentQuestionIndex = 0;
+    let userAnswers = {};
+    let startTime = null;
+    let timerInterval = null;
+    let timeLimit = null;
+    let timeRemaining = null;
+
+    function startExam(id) {
+      const exam = exams.find(e => e.id == id);
+      if (!exam) {
+        alert('Exam not found!');
+        return;
+      }
+
+      currentExam = exam;
+      currentQuestionIndex = 0;
+      userAnswers = {};
+      startTime = new Date();
+      timeLimit = exam.duration;
+
+      // Set modal title
+      document.getElementById('questionModalTitle').textContent = exam.title;
+
+      // Setup timer display
+      if (timeLimit) {
+        timeRemaining = timeLimit * 60;
+        document.getElementById('timeLimitInfo').style.display = 'inline';
+        document.getElementById('timeLimit').textContent = timeLimit;
+        document.getElementById('timeProgress').style.display = 'block';
+        updateTimeProgress();
+      } else {
+        document.getElementById('timeLimitInfo').style.display = 'none';
+        document.getElementById('timeProgress').style.display = 'none';
+      }
+
+      // Load questions
+      loadQuestions();
+
+      // Start timer
+      startTimer();
+      
+      // Show modal
+      const modal = new bootstrap.Modal(document.getElementById('questionModal'));
+      modal.show();
+    }
+
+    function loadQuestions() {
+      if (!currentExam || !currentExam.questions || currentExam.questions.length === 0) {
+        document.getElementById('questionContainer').innerHTML = `
+          <div class="question-card">
+            <div class="question-text">This exam doesn't have any questions yet.</div>
+            <p class="text-muted">Please contact your teacher to add questions to this exam.</p>
+          </div>
+        `;
+        document.getElementById('totalQuestions').textContent = '0';
+        document.getElementById('currentQuestionNum').textContent = '0';
+        return;
+      }
+
+      const questions = currentExam.questions;
+      document.getElementById('totalQuestions').textContent = questions.length;
+      displayCurrentQuestion();
+    }
+
+    function displayCurrentQuestion() {
+      if (!currentExam || !currentExam.questions) return;
+
+      const questions = currentExam.questions;
+      const question = questions[currentQuestionIndex];
+      
+      if (!question) return;
+      
+      // Reset autocorrect feedback
+      document.querySelectorAll('.autocorrect-feedback').forEach(feedback => feedback.remove());
+      document.querySelectorAll('.option-item').forEach(item => {
+        item.classList.remove('correct-answer', 'correct-selected', 'incorrect-selected', 'disabled');
+        item.style.pointerEvents = 'auto';
+        item.style.opacity = '1';
+      });
+      
+      let questionHtml = `
+        <div class="question-card">
+          <div class="question-text">${question.text || 'Question text not available'}</div>
+          <div class="question-options">
+      `;
+
+      // Handle answer types
+      if (question.type === 'multiple-choice' && question.options) {
+        question.options.forEach((option, index) => {
+          const isSelected = userAnswers[currentQuestionIndex] === index ? 'selected' : '';
+          questionHtml += `
+            <div class="option-item ${isSelected}" onclick="selectOption(${index})">
+              <input type="radio" class="option-radio" name="question_${currentQuestionIndex}" value="${index}" ${userAnswers[currentQuestionIndex] === index ? 'checked' : ''}>
+              <span class="option-text">${option}</span>
+            </div>
+          `;
+        });
+      }
+
+      questionHtml += `
+          </div>
+          <div class="question-meta">
+            <small class="text-muted">Points: ${question.points || 1}</small>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('questionContainer').innerHTML = questionHtml;
+      document.getElementById('currentQuestionNum').textContent = currentQuestionIndex + 1;
+      
+      // Update progress bar
+      const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+      document.getElementById('progressBar').style.width = progress + '%';
+      
+      // Update navigation buttons
+      updateNavigationButtons();
+    }
+
+    function selectOption(optionIndex) {
+      // Remove previous selection
+      document.querySelectorAll('.option-item').forEach(item => item.classList.remove('selected'));
+      
+      // Add selection to clicked option
+      event.currentTarget.classList.add('selected');
+      
+      // Update radio button
+      const radio = event.currentTarget.querySelector('input[type="radio"]');
+      radio.checked = true;
+      
+      // Save answer
+      userAnswers[currentQuestionIndex] = optionIndex;
+      
+      // Autocorrect functionality
+      if (currentExam && currentExam.questions && currentExam.questions[currentQuestionIndex]) {
+        const question = currentExam.questions[currentQuestionIndex];
+        if (question.type === 'multiple-choice' && question.correctAnswer !== undefined) {
+          // Show immediate feedback
+          showAutocorrectFeedback(optionIndex, question.correctAnswer);
+        }
+      }
+    }
+    
+    function showAutocorrectFeedback(selectedIndex, correctIndex) {
+      // Remove any existing feedback
+      document.querySelectorAll('.autocorrect-feedback').forEach(feedback => feedback.remove());
+      
+      const optionItems = document.querySelectorAll('.option-item');
+      const isCorrect = selectedIndex === correctIndex;
+      
+      // Mark correct answer
+      if (optionItems[correctIndex]) {
+        optionItems[correctIndex].classList.add('correct-answer');
+        const correctIcon = document.createElement('iconify-icon');
+        correctIcon.setAttribute('icon', 'material-symbols:check-circle');
+        correctIcon.style.color = '#28a745';
+        correctIcon.style.marginLeft = '8px';
+        correctIcon.className = 'autocorrect-feedback';
+        optionItems[correctIndex].appendChild(correctIcon);
+      }
+      
+      // Mark selected answer
+      if (optionItems[selectedIndex]) {
+        if (isCorrect) {
+          optionItems[selectedIndex].classList.add('correct-selected');
+        } else {
+          optionItems[selectedIndex].classList.add('incorrect-selected');
+          const incorrectIcon = document.createElement('iconify-icon');
+          incorrectIcon.setAttribute('icon', 'material-symbols:cancel');
+          incorrectIcon.style.color = '#dc3545';
+          incorrectIcon.style.marginLeft = '8px';
+          incorrectIcon.className = 'autocorrect-feedback';
+          optionItems[selectedIndex].appendChild(incorrectIcon);
+        }
+      }
+      
+      // Disable further selection
+      optionItems.forEach(item => {
+        item.style.pointerEvents = 'none';
+        item.style.opacity = '0.7';
+      });
+    }
+
+    function nextQuestion() {
+      if (currentExam && currentExam.questions && currentQuestionIndex < currentExam.questions.length - 1) {
+        currentQuestionIndex++;
+        displayCurrentQuestion();
+      } else {
+        // Show submit button on last question
+        document.getElementById('submitBtn').style.display = 'inline-block';
+        document.getElementById('nextBtn').style.display = 'none';
+      }
+    }
+
+    function previousQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        displayCurrentQuestion();
+        document.getElementById('submitBtn').style.display = 'none';
+        document.getElementById('nextBtn').style.display = 'inline-block';
+      }
+    }
+
+    function updateNavigationButtons() {
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      
+      prevBtn.disabled = currentQuestionIndex === 0;
+      
+      if (currentQuestionIndex === currentExam.questions.length - 1) {
+        nextBtn.style.display = 'none';
+        document.getElementById('submitBtn').style.display = 'inline-block';
+      } else {
+        nextBtn.style.display = 'inline-block';
+        document.getElementById('submitBtn').style.display = 'none';
+      }
+    }
+
+    function startTimer() {
+      startTime = new Date();
+      timerInterval = setInterval(updateTimer, 1000);
+    }
+
+    function updateTimer() {
+      if (!startTime) return;
+      
+      if (timeLimit && timeRemaining !== null) {
+        // Countdown timer
+        timeRemaining--;
+        
+        if (timeRemaining <= 0) {
+          // Time's up!
+          clearInterval(timerInterval);
+          alert('Time\'s up! Your exam will be submitted automatically.');
+          submitExam();
+          return;
+        }
+        
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+        
+        const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        document.getElementById('timer').textContent = timeString;
+        
+        // Update time progress bar
+        updateTimeProgress();
+        
+        // Change color when time is running low
+        const timerElement = document.getElementById('timer');
+        if (timeRemaining <= 300) { // 5 minutes or less
+          timerElement.style.color = '#dc3545';
+          timerElement.style.fontWeight = 'bold';
+        } else if (timeRemaining <= 600) { // 10 minutes or less
+          timerElement.style.color = '#ffc107';
+          timerElement.style.fontWeight = 'bold';
+        } else {
+          timerElement.style.color = '#667eea';
+          timerElement.style.fontWeight = 'normal';
+        }
+      } else {
+        // Regular elapsed time timer
+        const now = new Date();
+        const elapsed = Math.floor((now - startTime) / 1000);
+        const minutes = Math.floor(elapsed / 60);
+        const seconds = elapsed % 60;
+        
+        const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        document.getElementById('timer').textContent = timeString;
+      }
+    }
+
+    function updateTimeProgress() {
+      if (!timeLimit || timeRemaining === null) return;
+      
+      const progress = (timeRemaining / (timeLimit * 60)) * 100;
+      document.getElementById('timeProgressBar').style.width = progress + '%';
+      
+      // Change color based on remaining time
+      const progressBar = document.getElementById('timeProgressBar');
+      if (progress <= 20) {
+        progressBar.className = 'progress-bar bg-danger';
+      } else if (progress <= 40) {
+        progressBar.className = 'progress-bar bg-warning';
+      } else {
+        progressBar.className = 'progress-bar bg-success';
+      }
+    }
+    
+
+    function submitExam() {
+      // Calculate score
+      let score = 0;
+      let totalPoints = 0;
+      
+      currentExam.questions.forEach((question, index) => {
+        totalPoints += question.points || 1;
+        
+        if (question.type === 'multiple-choice') {
+          if (userAnswers[index] === question.correctAnswer) {
+            score += question.points || 1;
+          } else {
+            // Student answered incorrectly - create wrong question entry
+            createWrongQuestionEntry(question, index, 'exam');
+          }
+        }
+      });
+      
+      const percentage = Math.round((score / totalPoints) * 100);
+      const timeSpent = Math.floor((new Date() - startTime) / 60000); // in minutes
+      
+      // Update exam status
+      const examIndex = exams.findIndex(e => e.id === currentExam.id);
+      if (examIndex !== -1) {
+        exams[examIndex].status = 'completed';
+        exams[examIndex].progress = 100;
+        exams[examIndex].completedAt = new Date().toISOString();
+        exams[examIndex].answers = userAnswers;
+        exams[examIndex].totalPoints = totalPoints;
+        exams[examIndex].score = score;
+        exams[examIndex].percentage = percentage;
+        
+        // Preserve the published status to ensure exam remains visible
+        if (!exams[examIndex].published && !exams[examIndex].hasOwnProperty('published')) {
+          exams[examIndex].published = true;
+        }
+        
+        // Save updated exam to localStorage if it's a teacher-created exam
+        if (physicsExams.length > 0) {
+          const teacherExamIndex = physicsExams.findIndex(e => e.id === currentExam.id);
+          if (teacherExamIndex !== -1) {
+            physicsExams[teacherExamIndex] = exams[examIndex];
+            localStorage.setItem('physicsExams', JSON.stringify(physicsExams));
+            
+            // Dispatch event to update dashboard points
+            document.dispatchEvent(new CustomEvent('localStorageUpdated', { 
+              detail: { key: 'physicsExams', type: 'exam' } 
+            }));
+          }
+        }
+      }
+      
+      // Clear timer
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      
+      // Close modal
+      bootstrap.Modal.getInstance(document.getElementById('questionModal')).hide();
+      
+      // Show success message
+      alert(`Exam completed!\nScore: ${score}/${totalPoints} (${percentage}%)\nTime spent: ${timeSpent} minutes`);
+      
+      // Reload exams to show updated status
+      loadExams();
+    }
+
+    // Function to automatically create wrong question entries
+    function createWrongQuestionEntry(question, questionIndex, activityType) {
+      const wrongQuestion = {
+        id: 'wrong_' + Date.now() + '_' + questionIndex,
+        questionId: question.id,
+        questionText: question.text, // This is the key field
+        studentAnswer: question.options && question.options[userAnswers[questionIndex]] ? 
+                      question.options[userAnswers[questionIndex]] : 
+                      userAnswers[questionIndex] || 'No answer provided',
+        correctAnswer: question.options && question.options[question.correctAnswer] ? 
+                      question.options[question.correctAnswer] : 
+                      question.correctAnswer || 'Correct answer not provided',
+        course: 'physics', // Get from exam context
+        subject: 'physics',
+        activityType: activityType + 's', // exams
+        source: 'exam',
+        difficulty: question.difficulty || 'Medium',
+        points: question.points || 1,
+        topic: question.topic || 'General',
+        chapter: question.chapter || 'General',
+        createdAt: new Date().toISOString(),
+        // Ensure proper categorization
+        inActivityFolder: true
+      };
+
+      // Save to wrong questions collection
+      const wrongQuestions = JSON.parse(localStorage.getItem('physicsWrongQuestions') || '[]');
+      wrongQuestions.push(wrongQuestion);
+      localStorage.setItem('physicsWrongQuestions', JSON.stringify(wrongQuestions));
+      
+      console.log('Created wrong question entry:', wrongQuestion);
+    }
+
+    function reviewExam(id) {
+      const exam = exams.find(e => e.id == id);
+      if (!exam) {
+        alert('Exam not found!');
+        return;
+      }
+      
+      // Show review modal with exam results
+      alert(`Exam Review: ${exam.title}\nScore: ${exam.score}/${exam.totalPoints} (${exam.percentage}%)\nStatus: ${exam.status}`);
+    }
+
+
+    function searchExams(e) {
+      const term = e.target.value.toLowerCase();
+      const filtered = exams.filter(e =>
+        e.title.toLowerCase().includes(term) ||
+        e.description.toLowerCase().includes(term) ||
+        e.type.toLowerCase().includes(term) ||
+        e.difficulty.toLowerCase().includes(term)
+      );
+      
+      const grid = document.getElementById('examGrid');
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="col-12 text-center py-5"><h4>No exams found</h4><p class="text-muted">Try adjusting your search terms or filters.</p></div>`;
+        return;
+      }
+      
+      updateExamDisplay(filtered);
+    }
+
+    // Clear search function
+    function clearSearch() {
+      document.getElementById('examSearch').value = '';
+      document.getElementById('searchClearBtn').style.display = 'none';
+      loadExams();
+    }
+
+    // Cleanup when modal is closed
+    document.getElementById('questionModal').addEventListener('hidden.bs.modal', function() {
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      // Reset timer display
+      document.getElementById('timer').style.color = '#667eea';
+      document.getElementById('timer').style.fontWeight = 'normal';
+    });
+  </script>
+
+</body></html>

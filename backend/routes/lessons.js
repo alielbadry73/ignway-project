@@ -1,0 +1,9 @@
+const express = require('express');
+const router = express.Router();
+const auth = require('../middleware/auth');
+const { getLessonsByCourse, createLesson } = require('../controllers/lessonController');
+
+router.get('/:courseId', getLessonsByCourse);
+router.post('/', auth, createLesson);
+
+module.exports = router;

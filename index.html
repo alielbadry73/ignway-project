@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - IG Way IGCSE Tutoring</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  
+
+  <style>
+    /* Spacing fixes to ensure identity with about.html */
+    .top-utility-bar {
+      height: 70px !important;
+      background-color: #ffffff;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+    }
+    .utility-link {
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+    .utility-link:hover {
+      color: #0d6efd !important;
+    }
+    .logo {
+      height: 55px !important;
+      width: auto;
+    }
+    .unified-button {
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    text-decoration: none;
+}
+
+.unified-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    filter: brightness(1.05);
+}
+  </style>
+    <script src="js/no-storage.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Top Utility Bar -->
+    <div class="top-utility-bar" style="position:relative; height:70px;">
+        <div class="container-fluid" style="position:relative; height:100%;">
+      
+            <!-- Centered Logo -->
+            <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);">
+                <a href="./index.html">
+                    <img src="./ig-nation-logo-graduation (1).png" alt="IG Nation IGCSE Tutoring" style="height:55px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1)); transition: all 0.3s ease;" onerror="this.src='images/igway-logo.png'; this.alt='IG Way IGCSE Tutoring';">
+                </a>
+            </div>
+
+            <!-- Right-aligned Utility Links -->
+            <div style="position:absolute; right:20px; top:50%; transform:translateY(-50%); display:flex; align-items:center; gap:20px; font-size:14px;">
+        
+                <!-- User Name Display -->
+                <div id="userNameDisplay" style="display:none;">
+                    <span class="text-primary fw-bold" id="displayUserName">User</span>
+                </div>
+
+                <!-- Cart Button -->
+                <a href="#" class="utility-link" data-bs-toggle="modal" data-bs-target="#cartModal" style="text-decoration:none; color:#000; display:flex; align-items:center; position:relative;">
+                    <iconify-icon icon="material-symbols:shopping-cart" style="margin-right:5px;"></iconify-icon>
+                    Cart <span class="badge bg-primary ms-1" id="cartCount">0</span>
+                </a>
+
+                <!-- Favorites -->
+                <a href="#" class="utility-link" data-bs-toggle="modal" data-bs-target="#favoritesModal" style="text-decoration:none; color:#000; display:flex; align-items:center;">
+                    <iconify-icon icon="material-symbols:favorite" style="margin-right:5px;"></iconify-icon>
+                    Favorites
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-navigation">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-7">
+                    <ul class="nav-menu d-flex list-unstyled mb-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- FAQ removed -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/community">Community</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" onclick="openWhatsAppChat()" style="background: linear-gradient(135deg, #25d366, #128c7e); color: white; border-radius: 20px; padding: 8px 16px; font-weight: 600; display: flex; align-items: center; gap: 5px;">
+                                <iconify-icon icon="logos:whatsapp-icon" style="font-size: 1.1rem;"></iconify-icon>
+                                Chat with Staff
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-5">
+                    <div class="d-flex justify-content-end align-items-center gap-2">
+                        <a href="#" class="btn btn-outline-secondary login-btn" data-bs-toggle="modal" data-bs-target="#loginModal" style="font-size: 14px; padding: 8px 16px; display: inline-block;"><iconify-icon icon="material-symbols:login" class="me-1"></iconify-icon>Login</a>
+                        <a href="#" class="btn btn-primary register-btn" data-bs-toggle="modal" data-bs-target="#registerModal" style="font-size: 14px; padding: 8px 16px; display: inline-block;"><iconify-icon icon="material-symbols:person-add" class="me-1"></iconify-icon>Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 120px 0; position: relative; overflow: hidden; min-height: 100vh; display: flex; align-items: center;">
+            <!-- Background Elements -->
+            <div class="parallax-element floating" style="position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; z-index: 1; transform: translateY(-152.889px);"></div>
+            <div class="parallax-element floating-delayed" style="position: absolute; bottom: -150px; left: -150px; width: 500px; height: 500px; background: rgba(255, 255, 255, 0.05); border-radius: 50%; z-index: 1; transform: translateY(-152.889px);"></div>
+            <div class="parallax-element" style="position: absolute; top: 50%; left: 50%; transform: translateY(-152.889px); width: 300px; height: 300px; background: rgba(255, 255, 255, 0.03); border-radius: 50%; z-index: 1;"></div>
+            
+            <!-- Floating Elements -->
+            <div class="parallax-element floating" style="position: absolute; top: 20%; left: 10%; width: 60px; height: 60px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; z-index: 2; transform: translateY(-152.889px);"></div>
+            <div class="parallax-element floating-delayed" style="position: absolute; top: 30%; right: 15%; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.08); border-radius: 50%; z-index: 2; transform: translateY(-152.889px);"></div>
+            <div class="parallax-element floating" style="position: absolute; bottom: 25%; left: 20%; width: 50px; height: 50px; background: rgba(255, 255, 255, 0.06); border-radius: 12px; z-index: 2; transform: translateY(-152.889px);"></div>
+        
+            <div class="container" style="position: relative; z-index: 3;">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="animate-on-scroll animate-delay-1 animated" style="margin-bottom: 30px;">
+                            <div style="display: inline-block; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); padding: 8px 20px; border-radius: 25px; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.3);">
+                                <span style="color: white; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">🚀 Future of Learning</span>
+                            </div>
+                        </div>
+                        
+                        <h1 class="animate-on-scroll animate-delay-2 animated" style="font-size: 3.5rem; font-weight: 800; color: white; margin-bottom: 25px; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                            Transform Your 
+                            <span class="gradient-text">Learning Journey</span>
+                        </h1>
+                        
+                        <p class="animate-on-scroll animate-delay-3 animated" style="font-size: 1.3rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 40px; line-height: 1.6; font-weight: 300;">
+                            Discover a world of knowledge with our innovative online learning platform. Expert teachers, interactive content, and personalized support for every learner.
+                        </p>
+                        
+                        <div class="animate-on-scroll animate-delay-4 animated" style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
+                            <button class="unified-button" onclick="window.location.href='courses.html'" style="background: linear-gradient(135deg, #ffd700, #ffed4e); color: #1e293b; padding: 18px 35px; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                <iconify-icon icon="material-symbols:rocket-launch" style="font-size: 1.3rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m2.45 10.575l4.2-4.2q.35-.35.825-.5t.975-.05l1.3.275Q8.4 7.7 7.625 9t-1.5 3.15zm5.125 2.275q.575-1.8 1.563-3.4t2.387-3q2.2-2.2 5.025-3.287t5.275-.663q.425 2.45-.65 5.275T17.9 12.8q-1.375 1.375-3 2.388t-3.425 1.587zm8.313-2.425q.837 0 1.412-.575t.575-1.412t-.575-1.413t-1.412-.575t-1.413.575t-.575 1.413t.575 1.412t1.413.575m-2.113 11.45l-1.6-3.675q1.85-.725 3.163-1.5t2.912-2.125l.25 1.3q.1.5-.05.988t-.5.837zM4.05 16.05q.875-.875 2.125-.888t2.125.863t.875 2.125t-.875 2.125q-.625.625-2.088 1.075t-4.037.8q.35-2.575.8-4.025T4.05 16.05"></path></svg></template></iconify-icon>
+                                Get Started
+                            </button>
+                            <button onclick="openVideoModal()" style="background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid rgba(255, 255, 255, 0.3); padding: 18px 35px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; backdrop-filter: blur(10px); transition: 0.3s; display: flex; align-items: center; gap: 10px; cursor: pointer; transform: translateY(0px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.3)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(0)'">
+                                <iconify-icon icon="material-symbols:play-circle" style="font-size: 1.3rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m9.5 16.5l7-4.5l-7-4.5zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"></path></svg></template></iconify-icon>
+                                Watch Demo
+                            </button>
+                        </div>
+                        
+                        <!-- Stats -->
+                        <div class="animate-on-scroll animate-delay-5 animated" style="display: flex; gap: 40px; margin-top: 50px; flex-wrap: wrap;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; font-weight: 800; color: #ffd700; margin-bottom: 5px;">1000+</div>
+                                <div style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; font-weight: 500;">Learners</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; font-weight: 800; color: #ffd700; margin-bottom: 5px;">50+</div>
+                                <div style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; font-weight: 500;">Courses</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; font-weight: 800; color: #ffd700; margin-bottom: 5px;">24/7</div>
+                                <div style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; font-weight: 500;">Access</div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-6">
+                        <div class="animate-on-scroll-right animate-delay-3 animated" style="position: relative; text-align: center;">
+                            <!-- Main Hero Image -->
+                            <div style="position: relative; display: inline-block;">
+                                <img src="./homepageimage.jpg" alt="Online Learning Platform" class="unified-card animate-on-scroll-scale animated" style="width: 100%; max-width: 500px; height: auto; border-radius: 30px; transition: transform 0.3s; transform: scale(1); animation-delay: 0s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                                
+                                <!-- Floating Cards -->
+                                <div class="floating animate-on-scroll-scale animate-delay-4 animated" style="position: absolute; top: -20px; right: -20px; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                            <iconify-icon icon="material-symbols:school" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M21 17v-6.9L12 15L1 9l11-6l11 6v8zm-9 4l-7-3.8v-5l7 3.8l7-3.8v5z"></path></svg></template></iconify-icon>
+                                        </div>
+                                        <div>
+                                            <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">Expert Teachers</div>
+                                            <div style="color: #64748b; font-size: 0.8rem;">Qualified Instructors</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="floating-delayed animate-on-scroll-scale animate-delay-5 animated" style="position: absolute; bottom: -20px; left: -20px; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);">
+                                    <div style="display: flex; align-items: center; gap: 10px;">
+                                        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                            <iconify-icon icon="material-symbols:schedule" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m15.3 16.7l1.4-1.4l-3.7-3.7V7h-2v5.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"></path></svg></template></iconify-icon>
+                                        </div>
+                                        <div>
+                                            <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">Flexible Learning</div>
+                                            <div style="color: #64748b; font-size: 0.8rem;">Learn at Your Pace</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <!-- CSS Animation -->
+        <style>
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+            }
+        </style>
+    </section>
+    <section id="top-selling" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 100px 0; position: relative; overflow: hidden;">
+        <!-- Background Elements -->
+        <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 50%; z-index: 1;"></div>
+        <div style="position: absolute; bottom: -100px; left: -100px; width: 300px; height: 300px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05)); border-radius: 50%; z-index: 1;"></div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <div class="animate-on-scroll animate-delay-1 animated" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); padding: 8px 24px; border-radius: 50px; margin-bottom: 20px;">
+                    <span style="color: white; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Premium Education</span>
+                </div>
+                <h2 class="animate-on-scroll animate-delay-2 animated" style="font-size: 3.5rem; font-weight: 800; color: #1e293b; margin-bottom: 1.5rem; line-height: 1.2;">
+                    Our <span class="gradient-text">Courses</span>
+                </h2>
+                <p class="animate-on-scroll animate-delay-3 animated" style="font-size: 1.2rem; color: #64748b; max-width: 600px; margin: 0 auto; font-weight: 400;">
+                    Discover world-class IGCSE courses designed by expert educators to help you achieve academic excellence
+                </p>
+            </div>
+            
+            <!-- Enhanced Course Filter and Sort Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); padding: 3rem; border-radius: 32px; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1); margin-bottom: 3rem; border: 1px solid rgba(255, 255, 255, 0.3); position: relative; overflow: hidden;">
+                        <!-- Decorative Elements -->
+                        <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)); border-radius: 50%;"></div>
+                        <div style="position: absolute; bottom: -30px; left: -30px; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08)); border-radius: 50%;"></div>
+                        
+                        <div class="row align-items-center" style="position: relative; z-index: 2;">
+                            <div class="col-lg-8 mb-4 mb-lg-0">
+                                <div class="filter-section">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 15px; display: flex; align-items: center; justify-content: center; margin-right: 15px; box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);">
+                                            <iconify-icon icon="material-symbols:filter-list" style="color: white; font-size: 1.5rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M10 18v-2h4v2zm-4-5v-2h12v2zM3 8V6h18v2z"></path></svg></template></iconify-icon>
+                                        </div>
+                                        <h4 style="color: #1e293b; font-weight: 700; margin: 0; font-size: 1.5rem;">Filter Courses</h4>
+                                    </div>
+                                    <div class="subject-filters" style="display: flex; flex-wrap: wrap; gap: 12px;">
+                                        <button class="subject-filter active" data-filter="*" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 12px 20px; border-radius: 25px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); display: flex; align-items: center; gap: 8px;">
+                                            <iconify-icon icon="material-symbols:apps"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M4.588 19.413Q4 18.825 4 18t.588-1.412T6 16t1.413.588T8 18t-.587 1.413T6 20t-1.412-.587m6 0Q10 18.825 10 18t.588-1.412T12 16t1.413.588T14 18t-.587 1.413T12 20t-1.412-.587m6 0Q16 18.825 16 18t.588-1.412T18 16t1.413.588T20 18t-.587 1.413T18 20t-1.412-.587m-12-6Q4 12.825 4 12t.588-1.412T6 10t1.413.588T8 12t-.587 1.413T6 14t-1.412-.587m6 0Q10 12.825 10 12t.588-1.412T12 10t1.413.588T14 12t-.587 1.413T12 14t-1.412-.587m6 0Q16 12.825 16 12t.588-1.412T18 10t1.413.588T20 12t-.587 1.413T18 14t-1.412-.587m-12-6Q4 6.825 4 6t.588-1.412T6 4t1.413.588T8 6t-.587 1.413T6 8t-1.412-.587m6 0Q10 6.825 10 6t.588-1.412T12 4t1.413.588T14 6t-.587 1.413T12 8t-1.412-.587m6 0Q16 6.825 16 6t.588-1.412T18 4t1.413.588T20 6t-.587 1.413T18 8t-1.412-.587"></path></svg></template></iconify-icon>
+                                            All Courses
+                                            <span class="filter-count" id="all-count" style="background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 12px; font-size: 0.8rem;">3</span>
+                                        </button>
+                                        <button class="subject-filter" data-filter=".mathematics" style="background: white; color: #64748b; border: 2px solid #e2e8f0; padding: 12px 20px; border-radius: 25px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                            <iconify-icon icon="material-symbols:calculate"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8 18h1.5v-2h2v-1.5h-2v-2H8v2H6V16h2zm5-.75h5v-1.5h-5zm0-2.5h5v-1.5h-5zM6.25 9.2h5V7.7h-5zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21z"></path></svg></template></iconify-icon>
+                                            Mathematics
+                                            <span class="filter-count" id="math-count" style="background: #f1f5f9; color: #64748b; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem;">1</span>
+                                        </button>
+                                        <button class="subject-filter" data-filter=".physics" style="background: white; color: #64748b; border: 2px solid #e2e8f0; padding: 12px 20px; border-radius: 25px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                            <iconify-icon icon="material-symbols:science"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-1.275 0-1.812-1.137t.262-2.113L9 11V5H8q-.425 0-.712-.288T7 4t.288-.712T8 3h8q.425 0 .713.288T17 4t-.288.713T16 5h-1v6l5.55 6.75q.8.975.263 2.113T19 21z"></path></svg></template></iconify-icon>
+                                            Physics
+                                            <span class="filter-count" id="physics-count" style="background: #f1f5f9; color: #64748b; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem;">1</span>
+                                        </button>
+                                        <button class="subject-filter" data-filter=".chemistry" style="background: white; color: #64748b; border: 2px solid #e2e8f0; padding: 12px 20px; border-radius: 25px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                            <iconify-icon icon="material-symbols:biotech"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21v-2h5v-2q-2.075 0-3.537-1.463T5 12q0-1.425.725-2.625t2-1.825q-.1.55.038 1.075t.437 1q-.575.4-.888 1.025T7 12q0 1.25.875 2.125T10 15h8v2h-5v2h6v2zm9-8.9l-.3-.95l-.95.35l-.5-1.325q.5-.4.775-.962T13.3 8q0-1.175-.825-1.987T10.45 5.2L10 3.95l.95-.35l-.35-.9l1.9-.7l.3.95l.95-.35l2.75 7.5l-.95.35l.35.95zM9.225 9.275Q8.7 8.75 8.7 8t.525-1.275T10.5 6.2t1.275.525T12.3 8t-.525 1.275T10.5 9.8t-1.275-.525"></path></svg></template></iconify-icon>
+                                            Chemistry
+                                            <span class="filter-count" id="chemistry-count" style="background: #f1f5f9; color: #64748b; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem;">0</span>
+                                        </button>
+                                        <button class="subject-filter" data-filter=".english" style="background: white; color: #64748b; border: 2px solid #e2e8f0; padding: 12px 20px; border-radius: 25px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                            <iconify-icon icon="material-symbols:menu-book"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M14 9.9V8.2q.825-.35 1.688-.525T17.5 7.5q.65 0 1.275.1T20 7.85v1.6q-.6-.225-1.213-.337T17.5 9q-.95 0-1.825.238T14 9.9m0 5.5v-1.7q.825-.35 1.688-.525T17.5 13q.65 0 1.275.1t1.225.25v1.6q-.6-.225-1.213-.338T17.5 14.5q-.95 0-1.825.225T14 15.4m0-2.75v-1.7q.825-.35 1.688-.525t1.812-.175q.65 0 1.275.1T20 10.6v1.6q-.6-.225-1.213-.338T17.5 11.75q-.95 0-1.825.238T14 12.65m-1 4.4q1.1-.525 2.213-.788T17.5 16q.9 0 1.763.15T21 16.6V6.7q-.825-.35-1.713-.525T17.5 6q-1.175 0-2.325.3T13 7.2zM12 20q-1.2-.95-2.6-1.475T6.5 18q-1.05 0-2.062.275T2.5 19.05q-.525.275-1.012-.025T1 18.15V6.1q0-.275.138-.525T1.55 5.2q1.175-.575 2.413-.888T6.5 4q1.45 0 2.838.375T12 5.5q1.275-.75 2.663-1.125T17.5 4q1.3 0 2.538.313t2.412.887q.275.125.413.375T23 6.1v12.05q0 .575-.487.875t-1.013.025q-.925-.5-1.937-.775T17.5 18q-1.5 0-2.9.525T12 20"></path></svg></template></iconify-icon>
+                                            English
+                                            <span class="filter-count" id="english-count" style="background: #f1f5f9; color: #64748b; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem;">1</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="sort-section">
+                                    <div class="d-flex align-items-center justify-content-end mb-3">
+                                        <h6 style="color: #64748b; font-weight: 600; margin: 0 15px 0 0; font-size: 1rem;">Sort by:</h6>
+                                        <button class="sort-option active" data-sort="featured" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 12px 20px; border-radius: 25px; font-weight: 600; font-size: 0.9rem; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;">
+                                            <iconify-icon icon="material-symbols:star"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"></path></svg></template></iconify-icon>
+                                            Featured
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Course Cards -->
+            <div class="row g-4 isotope-container">
+                <div class="col-lg-4 col-md-6 item mathematics">
+                    <div style="background: white; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); transition: all 0.4s ease; border: 1px solid rgba(102, 126, 234, 0.1); position: relative;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 30px 60px rgba(0, 0, 0, 0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.08)'">
+                        
+                        <!-- Course Image -->
+                        <div style="position: relative; overflow: hidden; height: 220px;">
+                            <a href="/course-details?course=mathematics">
+                                <img src="images/teacher1.PNG" class="img-fluid" alt="IGCSE Mathematics Course" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            </a>
+                            
+                            <!-- Course Badge -->
+                            <div style="position: absolute; top: 20px; left: 20px; background: linear-gradient(135deg, #ffd700, #ffed4e); color: #1e293b; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); display: flex; align-items: center; gap: 6px;">
+                                <iconify-icon icon="material-symbols:star" style="font-size: 1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"></path></svg></template></iconify-icon>
+                                Featured
+                            </div>
+                            
+                            <!-- Favorite Button -->
+                            <button class="favorite-button" data-course="mathematics" onclick="toggleFavorite('mathematics')" style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.9); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; backdrop-filter: blur(10px);" onmouseover="this.style.background='rgba(255, 255, 255, 1)'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.9)'; this.style.transform='scale(1)'">
+                                <iconify-icon icon="mdi:heart-outline" style="font-size: 1.2rem; color: #dc3545;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m12.1 18.55l-.1.1l-.11-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05M16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3"></path></svg></template></iconify-icon>
+                            </button>
+                        </div>
+                        
+                        <!-- Course Content -->
+                        <div style="padding: 30px;">
+                            <a href="/course-details?course=mathematics" style="text-decoration: none;">
+                                <h5 style="font-size: 1.4rem; font-weight: 700; color: #1e293b; margin-bottom: 12px; line-height: 1.3;">IGCSE Mathematics (Extended)</h5>
+                            </a>
+                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem;">Master advanced mathematical concepts with comprehensive coverage of IGCSE Extended Mathematics curriculum.</p>
+                            
+                            <!-- Instructor Card -->
+                            <div style="display: flex; align-items: center; margin-bottom: 20px; padding: 15px; background: #f8fafc; border-radius: 15px;">
+                                <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.9rem; margin-right: 12px;">SM</div>
+                                <div>
+                                    <p style="font-weight: 600; color: #1e293b; margin: 0; font-size: 0.9rem;">Dr. Sarah Mitchell</p>
+                                    <p style="color: #64748b; margin: 0; font-size: 0.8rem;">Cambridge Board</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Rating Section -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="display: flex; align-items: center; gap: 4px;">
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                </div>
+                                <span style="color: #64748b; font-size: 0.9rem; font-weight: 500;">4.9 (127 reviews)</span>
+                            </div>
+                            
+                            <!-- Pricing Section -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">299.00 EGP</span>
+                                    <span style="font-size: 1rem; color: #94a3b8; text-decoration: line-through;">399.00 EGP</span>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">25% OFF</div>
+                            </div>
+                            
+                            <!-- Course Actions -->
+                            <div style="display: flex; gap: 12px;">
+                                <button onclick="alert('Math button clicked! Function exists: ' + (typeof window.enrollInCourse)); console.log('Button clicked!'); if(typeof enrollInCourse === 'function') { enrollInCourse('mathematics'); } else { alert('enrollInCourse function not found!'); }" style="flex: 1; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 14px 20px; border-radius: 15px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.3)'">
+                                    <iconify-icon icon="material-symbols:play-arrow"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8 19V5l11 7z"></path></svg></template></iconify-icon>
+                                    Enroll Now
+                                </button>
+                                <button class="cart-button" data-course="mathematics" onclick="addToCart('mathematics')" style="background: white; color: #667eea; border: 2px solid #667eea; padding: 14px 20px; border-radius: 15px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.background='#667eea'; this.style.color='white'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='white'; this.style.color='#667eea'; this.style.transform='translateY(0)'">
+                                    <iconify-icon icon="material-symbols:add-shopping-cart"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 9V6H8V4h3V1h2v3h3v2h-3v3zM5.588 21.413Q5 20.825 5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22t-1.412-.587m10 0Q15 20.825 15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22t-1.412-.587M1 4V2h3.275l4.25 9h7l3.9-7H21.7l-4.4 7.95q-.275.5-.737.775T15.55 13H8.1L7 15h12v2H7q-1.125 0-1.713-.975T5.25 14.05L6.6 11.6L3 4z"></path></svg></template></iconify-icon>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 item physics">
+                    <div style="background: white; border-radius: 24px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 40px; transition: 0.4s; border: 1px solid rgba(102, 126, 234, 0.1); position: relative; transform: translateY(0px);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 30px 60px rgba(0, 0, 0, 0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.08)'">
+                        
+                        <!-- Course Image -->
+                        <div style="position: relative; overflow: hidden; height: 220px;">
+                            <a href="/course-details?course=physics">
+                                <img src="images/teacher2.PNG" class="img-fluid" alt="IGCSE Physics Course" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            </a>
+                            
+                            <!-- Course Badge -->
+                            <div style="position: absolute; top: 20px; left: 20px; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); display: flex; align-items: center; gap: 6px;">
+                                <iconify-icon icon="material-symbols:science" style="font-size: 1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-1.275 0-1.812-1.137t.262-2.113L9 11V5H8q-.425 0-.712-.288T7 4t.288-.712T8 3h8q.425 0 .713.288T17 4t-.288.713T16 5h-1v6l5.55 6.75q.8.975.263 2.113T19 21z"></path></svg></template></iconify-icon>
+                                Popular
+                            </div>
+                            
+                            <!-- Favorite Button -->
+                            <button class="favorite-button" data-course="physics" onclick="toggleFavorite('physics')" style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.9); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; backdrop-filter: blur(10px);" onmouseover="this.style.background='rgba(255, 255, 255, 1)'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.9)'; this.style.transform='scale(1)'">
+                                <iconify-icon icon="mdi:heart-outline" style="font-size: 1.2rem; color: #dc3545;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m12.1 18.55l-.1.1l-.11-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05M16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3"></path></svg></template></iconify-icon>
+                            </button>
+                        </div>
+                        
+                        <!-- Course Content -->
+                        <div style="padding: 30px;">
+                            <a href="/course-details?course=physics" style="text-decoration: none;">
+                                <h5 style="font-size: 1.4rem; font-weight: 700; color: #1e293b; margin-bottom: 12px; line-height: 1.3;">IGCSE Physics (Extended)</h5>
+                            </a>
+                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem;">Master fundamental physics concepts with comprehensive coverage of IGCSE Extended Physics curriculum including mechanics, waves, and electricity.</p>
+                            
+                            <!-- Instructor Card -->
+                            <div style="display: flex; align-items: center; margin-bottom: 20px; padding: 15px; background: #f8fafc; border-radius: 15px;">
+                                <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.9rem; margin-right: 12px;">MC</div>
+                                <div>
+                                    <p style="font-weight: 600; color: #1e293b; margin: 0; font-size: 0.9rem;">Prof. Michael Chen</p>
+                                    <p style="color: #64748b; margin: 0; font-size: 0.8rem;">Edexcel Board</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Rating Section -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="display: flex; align-items: center; gap: 4px;">
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                </div>
+                                <span style="color: #64748b; font-size: 0.9rem; font-weight: 500;">4.8 (98 reviews)</span>
+                            </div>
+                            
+                            <!-- Pricing Section -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">279.00 EGP</span>
+                                    <span style="font-size: 1rem; color: #94a3b8; text-decoration: line-through;">349.00 EGP</span>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">20% OFF</div>
+                            </div>
+                            
+                            <!-- Course Actions -->
+                            <div style="display: flex; gap: 12px;">
+                                <button onclick="console.log('Physics button clicked!'); if(typeof enrollInCourse === 'function') { enrollInCourse('physics'); } else { alert('enrollInCourse function not found!'); }" style="flex: 1; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 14px 20px; border-radius: 15px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(16, 185, 129, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(16, 185, 129, 0.3)'">
+                                    <iconify-icon icon="material-symbols:play-arrow"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8 19V5l11 7z"></path></svg></template></iconify-icon>
+                                    Enroll Now
+                                </button>
+                                <button class="cart-button" data-course="physics" onclick="addToCart('physics')" style="background: white; color: #10b981; border: 2px solid #10b981; padding: 14px 20px; border-radius: 15px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.background='#10b981'; this.style.color='white'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='white'; this.style.color='#10b981'; this.style.transform='translateY(0)'">
+                                    <iconify-icon icon="material-symbols:add-shopping-cart"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 9V6H8V4h3V1h2v3h3v2h-3v3zM5.588 21.413Q5 20.825 5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22t-1.412-.587m10 0Q15 20.825 15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22t-1.412-.587M1 4V2h3.275l4.25 9h7l3.9-7H21.7l-4.4 7.95q-.275.5-.737.775T15.55 13H8.1L7 15h12v2H7q-1.125 0-1.713-.975T5.25 14.05L6.6 11.6L3 4z"></path></svg></template></iconify-icon>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 item english">
+                    <div style="background: white; border-radius: 24px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 40px; transition: 0.4s; border: 1px solid rgba(102, 126, 234, 0.1); position: relative; transform: translateY(0px);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 30px 60px rgba(0, 0, 0, 0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.08)'">
+                        
+                        <!-- Course Image -->
+                        <div style="position: relative; overflow: hidden; height: 220px;">
+                            <a href="/course-details?course=english">
+                                <img src="images/teacher3.PNG" class="img-fluid" alt="IGCSE English Language Course" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            </a>
+                            
+                            <!-- Course Badge -->
+                            <div style="position: absolute; top: 20px; left: 20px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; padding: 8px 16px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3); display: flex; align-items: center; gap: 6px;">
+                                <iconify-icon icon="material-symbols:star" style="font-size: 1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"></path></svg></template></iconify-icon>
+                                Featured
+                            </div>
+                            
+                            <!-- Favorite Button -->
+                            <button class="favorite-button" data-course="english" onclick="toggleFavorite('english')" style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.9); border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; backdrop-filter: blur(10px);" onmouseover="this.style.background='rgba(255, 255, 255, 1)'; this.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.9)'; this.style.transform='scale(1)'">
+                                <iconify-icon icon="mdi:heart-outline" style="font-size: 1.2rem; color: #dc3545;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m12.1 18.55l-.1.1l-.11-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05M16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3"></path></svg></template></iconify-icon>
+                            </button>
+                        </div>
+                        
+                        <!-- Course Content -->
+                        <div style="padding: 30px;">
+                            <a href="/course-details?course=english" style="text-decoration: none;">
+                                <h5 style="font-size: 1.4rem; font-weight: 700; color: #1e293b; margin-bottom: 12px; line-height: 1.3;">IGCSE English Language</h5>
+                            </a>
+                            <p style="color: #64748b; line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem;">Master English language skills with comprehensive coverage of reading, writing, speaking, and listening for IGCSE success.</p>
+                            
+                            <!-- Instructor Card -->
+                            <div style="display: flex; align-items: center; margin-bottom: 20px; padding: 15px; background: #f8fafc; border-radius: 15px;">
+                                <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.9rem; margin-right: 12px;">ER</div>
+                                <div>
+                                    <p style="font-weight: 600; color: #1e293b; margin: 0; font-size: 0.9rem;">Dr. Emily Rodriguez</p>
+                                    <p style="color: #64748b; margin: 0; font-size: 0.8rem;">Cambridge Board</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Rating Section -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                                <div style="display: flex; align-items: center; gap: 4px;">
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                    <iconify-icon icon="clarity:star-solid" style="color: #ffd700; font-size: 1.1rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36"><path fill="currentColor" d="M34 16.78a2.22 2.22 0 0 0-1.29-4l-9-.34a.23.23 0 0 1-.2-.15l-3.11-8.4a2.22 2.22 0 0 0-4.17 0l-3.1 8.43a.23.23 0 0 1-.2.15l-9 .34a2.22 2.22 0 0 0-1.29 4l7.06 5.55a.23.23 0 0 1 .08.24l-2.43 8.61a2.22 2.22 0 0 0 3.38 2.45l7.46-5a.22.22 0 0 1 .25 0l7.46 5a2.2 2.2 0 0 0 2.55 0a2.2 2.2 0 0 0 .83-2.4l-2.45-8.64a.22.22 0 0 1 .08-.24Z" class="clr-i-solid clr-i-solid-path-1"></path><path fill="none" d="M0 0h36v36H0z"></path></svg></template></iconify-icon>
+                                </div>
+                                <span style="color: #64748b; font-size: 0.9rem; font-weight: 500;">4.9 (156 reviews)</span>
+                            </div>
+                            
+                            <!-- Pricing Section -->
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px;">
+                                <div style="display: flex; align-items: center; gap: 10px;">
+                                    <span style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">249.00 EGP</span>
+                                    <span style="font-size: 1rem; color: #94a3b8; text-decoration: line-through;">329.00 EGP</span>
+                                </div>
+                                <div style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">24% OFF</div>
+                            </div>
+                            
+                            <!-- Course Actions -->
+                            <div style="display: flex; gap: 12px;">
+                                <button onclick="console.log('English button clicked!'); if(typeof enrollInCourse === 'function') { enrollInCourse('english'); } else { alert('enrollInCourse function not found!'); }" style="flex: 1; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; border: none; padding: 14px 20px; border-radius: 15px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3); display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(139, 92, 246, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(139, 92, 246, 0.3)'">
+                                    <iconify-icon icon="material-symbols:play-arrow"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8 19V5l11 7z"></path></svg></template></iconify-icon>
+                                    Enroll Now
+                                </button>
+                                <button class="cart-button" data-course="english" onclick="addToCart('english')" style="background: white; color: rgb(139, 92, 246); border: 2px solid rgb(139, 92, 246); padding: 14px 20px; border-radius: 15px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px; transform: translateY(0px);" onmouseover="this.style.background='#8b5cf6'; this.style.color='white'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='white'; this.style.color='#8b5cf6'; this.style.transform='translateY(0)'">
+                                    <iconify-icon icon="material-symbols:add-shopping-cart"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M11 9V6H8V4h3V1h2v3h3v2h-3v3zM5.588 21.413Q5 20.825 5 20t.588-1.412T7 18t1.413.588T9 20t-.587 1.413T7 22t-1.412-.587m10 0Q15 20.825 15 20t.588-1.412T17 18t1.413.588T19 20t-.587 1.413T17 22t-1.412-.587M1 4V2h3.275l4.25 9h7l3.9-7H21.7l-4.4 7.95q-.275.5-.737.775T15.55 13H8.1L7 15h12v2H7q-1.125 0-1.713-.975T5.25 14.05L6.6 11.6L3 4z"></path></svg></template></iconify-icon>
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="service" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 100px 0; position: relative; overflow: hidden;">
+        <!-- Background Pattern -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1;">
+            <div style="background-image: url('data:image/svg+xml,&lt;svg xmlns=\" http:="" www.w3.org="" 2000="" svg\"="" viewbox="\&quot;0" 0="" 100="" 100\"=""><defs><pattern id="\&quot;grain\&quot;" width="\&quot;100\&quot;" height="\&quot;100\&quot;" patternunits="\&quot;userSpaceOnUse\&quot;"><circle cx="\&quot;25\&quot;" cy="\&quot;25\&quot;" r="\&quot;1\&quot;" fill="\&quot;white\&quot;/"><circle cx="\&quot;75\&quot;" cy="\&quot;75\&quot;" r="\&quot;1\&quot;" fill="\&quot;white\&quot;/"><circle cx="\&quot;50\&quot;" cy="\&quot;10\&quot;" r="\&quot;0.5\&quot;" fill="\&quot;white\&quot;/"><circle cx="\&quot;10\&quot;" cy="\&quot;60\&quot;" r="\&quot;0.5\&quot;" fill="\&quot;white\&quot;/"><circle cx="\&quot;90\&quot;" cy="\&quot;40\&quot;" r="\&quot;0.5\&quot;" fill="\&quot;white\&quot;/"></circle></circle></circle></circle></circle></pattern></defs><rect width="\&quot;100\&quot;" height="\&quot;100\&quot;" fill="\&quot;url(%23grain)\&quot;/">'); background-size: 200px 200px;"&gt;</rect></div>
+        </div>
+        
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="text-center mb-5">
+                <h2 style="font-size: 3rem; font-weight: 800; color: white; margin-bottom: 1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                    Why Choose <span style="background: linear-gradient(45deg, #ffd700, #ffed4e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">IG Nation</span>
+                </h2>
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; font-weight: 300;">
+                    Experience world-class education with cutting-edge technology and expert guidance
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div style="background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.1); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);">
+                            <iconify-icon icon="material-symbols:school" style="font-size: 2.5rem; color: white;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M21 17v-6.9L12 15L1 9l11-6l11 6v8zm-9 4l-7-3.8v-5l7 3.8l7-3.8v5z"></path></svg></template></iconify-icon>
+                        </div>
+                        <h4 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">Dual Teaching System</h4>
+                        <p style="color: #64748b; line-height: 1.6; font-size: 1rem;">Learn from both expert teachers and dedicated assistants for deeper understanding and real-time support.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); transform: translateY(0px);" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);">
+                            <iconify-icon icon="material-symbols:schedule" style="font-size: 2.5rem; color: white;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m15.3 16.7l1.4-1.4l-3.7-3.7V7h-2v5.4zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22t-3.9-.788m1-1.762l1.2-2.75q-1.05-.375-1.812-1.162T7.3 13.7l-2.75 1.15q.575 1.6 1.775 2.8t2.775 1.8M7.3 10.3q.425-1.05 1.188-1.837T10.3 7.3L9.15 4.55q-1.6.6-2.8 1.8t-1.8 2.8zm6.825 3.825Q15 13.25 15 12t-.875-2.125T12 9t-2.125.875T9 12t.875 2.125T12 15t2.125-.875m.775 5.325q1.575-.6 2.763-1.787T19.45 14.9l-2.75-1.2q-.375 1.05-1.15 1.813t-1.8 1.187zm1.8-9.2l2.75-1.15q-.6-1.575-1.787-2.762T14.9 4.55l-1.15 2.8q1.025.375 1.775 1.138T16.7 10.25"></path></svg></template></iconify-icon>
+                        </div>
+                        <h4 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">Comprehensive Recorded Library</h4>
+                        <p style="color: #64748b; line-height: 1.6; font-size: 1rem;">Access trimmed, timestamped sessions with solved PDFs — available anytime for revision and catch-up.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); transform: translateY(0px);" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);">
+                            <iconify-icon icon="material-symbols:support" style="font-size: 2.5rem; color: white;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8.1 21.213q-1.825-.788-3.175-2.138T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22t-3.9-.788m1-1.762l1.2-2.75q-1.05-.375-1.812-1.162T7.3 13.7l-2.75 1.15q.575 1.6 1.775 2.8t2.775 1.8M7.3 10.3q.425-1.05 1.188-1.837T10.3 7.3L9.15 4.55q-1.6.6-2.8 1.8t-1.8 2.8zm6.825 3.825Q15 13.25 15 12t-.875-2.125T12 9t-2.125.875T9 12t.875 2.125T12 15t2.125-.875m.775 5.325q1.575-.6 2.763-1.787T19.45 14.9l-2.75-1.2q-.375 1.05-1.15 1.813t-1.8 1.187zm1.8-9.2l2.75-1.15q-.6-1.575-1.787-2.762T14.9 4.55l-1.15 2.8q1.025.375 1.775 1.138T16.7 10.25"></path></svg></template></iconify-icon>
+                        </div>
+                        <h4 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">Smart Practice &amp; Quizzes</h4>
+                        <p style="color: #64748b; line-height: 1.6; font-size: 1rem;">Strengthen learning with mini quizzes, mock exams, and auto-graded assignments — designed for IGCSE mastery.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); transform: translateY(0px);" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);">
+                            <iconify-icon icon="material-symbols:analytics" style="font-size: 2.5rem; color: white;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7 17h2v-5H7zm8 0h2V7h-2zm-4 0h2v-3h-2zm0-5h2v-2h-2zm-6 9q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21z"></path></svg></template></iconify-icon>
+                        </div>
+                        <h4 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">Advanced Progress Tracking</h4>
+                        <p style="color: #64748b; line-height: 1.6; font-size: 1rem;">Get daily, weekly, and monthly performance reports with parent alerts and estimated grade predictions.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); transform: translateY(0px);" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);">
+                            <iconify-icon icon="material-symbols:workspace-premium" style="font-size: 2.5rem; color: white;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m9.675 13.7l.875-2.85L8.25 9h2.85l.9-2.8l.9 2.8h2.85l-2.325 1.85l.875 2.85l-2.3-1.775zM6 23v-7.725q-.95-1.05-1.475-2.4T4 10q0-3.35 2.325-5.675T12 2t5.675 2.325T20 10q0 1.525-.525 2.875T18 15.275V23l-6-2zm10.25-8.75Q18 12.5 18 10t-1.75-4.25T12 4T7.75 5.75T6 10t1.75 4.25T12 16t4.25-1.75"></path></svg></template></iconify-icon>
+                        </div>
+                        <h4 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">24/7 Learning Community</h4>
+                        <p style="color: #64748b; line-height: 1.6; font-size: 1rem;">Receive instant help from assistants, peers, and live Q&amp;A sessions within each subject's active community.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); transform: translateY(0px);" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);">
+                            <iconify-icon icon="material-symbols:groups" style="font-size: 2.5rem; color: white;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M0 18v-1.575q0-1.075 1.1-1.75T4 14q.325 0 .625.013t.575.062q-.35.525-.525 1.1t-.175 1.2V18zm6 0v-1.625q0-.8.438-1.463t1.237-1.162T9.588 13T12 12.75q1.325 0 2.438.25t1.912.75t1.225 1.163t.425 1.462V18zm13.5 0v-1.625q0-.65-.162-1.225t-.488-1.075q.275-.05.563-.062T20 14q1.8 0 2.9.663t1.1 1.762V18zM4 13q-.825 0-1.412-.587T2 11q0-.85.588-1.425T4 9q.85 0 1.425.575T6 11q0 .825-.575 1.413T4 13m16 0q-.825 0-1.412-.587T18 11q0-.85.588-1.425T20 9q.85 0 1.425.575T22 11q0 .825-.575 1.413T20 13m-8-1q-1.25 0-2.125-.875T9 9q0-1.275.875-2.137T12 6q1.275 0 2.138.863T15 9q0 1.25-.862 2.125T12 12"></path></svg></template></iconify-icon>
+                        </div>
+                        <h4 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">Motivation &amp; Rewards System</h4>
+                        <p style="color: #64748b; line-height: 1.6; font-size: 1rem;">Stay consistent with leaderboards, badges, and achievement milestones for quizzes, past papers, and attendance.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); transform: translateY(0px);" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);">
+                            <iconify-icon icon="material-symbols:analytics" style="font-size: 2.5rem; color: white;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M7 17h2v-5H7zm8 0h2V7h-2zm-4 0h2v-3h-2zm0-5h2v-2h-2zm-6 9q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21z"></path></svg></template></iconify-icon>
+                        </div>
+                        <h4 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">Advanced Progress Tracking</h4>
+                        <p style="color: #64748b; line-height: 1.6; font-size: 1rem;">Get daily, weekly, and monthly performance reports with parent alerts and estimated grade predictions.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); transform: translateY(0px);" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);">
+                            <iconify-icon icon="material-symbols:workspace-premium" style="font-size: 2.5rem; color: white;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m9.675 13.7l.875-2.85L8.25 9h2.85l.9-2.8l.9 2.8h2.85l-2.325 1.85l.875 2.85l-2.3-1.775zM6 23v-7.725q-.95-1.05-1.475-2.4T4 10q0-3.35 2.325-5.675T12 2t5.675 2.325T20 10q0 1.525-.525 2.875T18 15.275V23l-6-2zm10.25-8.75Q18 12.5 18 10t-1.75-4.25T12 4T7.75 5.75T6 10t1.75 4.25T12 16t4.25-1.75"></path></svg></template></iconify-icon>
+                        </div>
+                        <h4 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">24/7 Learning Community</h4>
+                        <p style="color: #64748b; line-height: 1.6; font-size: 1rem;">Receive instant help from assistants, peers, and live Q&amp;A sessions within each subject's active community.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div style="background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 40px; transition: 0.3s; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); transform: translateY(0px);" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.1)'">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);">
+                            <iconify-icon icon="material-symbols:groups" style="font-size: 2.5rem; color: white;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M0 18v-1.575q0-1.075 1.1-1.75T4 14q.325 0 .625.013t.575.062q-.35.525-.525 1.1t-.175 1.2V18zm6 0v-1.625q0-.8.438-1.463t1.237-1.162T9.588 13T12 12.75q1.325 0 2.438.25t1.912.75t1.225 1.163t.425 1.462V18zm13.5 0v-1.625q0-.65-.162-1.225t-.488-1.075q.275-.05.563-.062T20 14q1.8 0 2.9.663t1.1 1.762V18zM4 13q-.825 0-1.412-.587T2 11q0-.85.588-1.425T4 9q.85 0 1.425.575T6 11q0 .825-.575 1.413T4 13m16 0q-.825 0-1.412-.587T18 11q0-.85.588-1.425T20 9q.85 0 1.425.575T22 11q0 .825-.575 1.413T20 13m-8-1q-1.25 0-2.125-.875T9 9q0-1.275.875-2.137T12 6q1.275 0 2.138.863T15 9q0 1.25-.862 2.125T12 12"></path></svg></template></iconify-icon>
+                        </div>
+                        <h4 style="font-size: 1.5rem; font-weight: 700; color: #1e293b; margin-bottom: 15px;">Motivation &amp; Rewards System</h4>
+                        <p style="color: #64748b; line-height: 1.6; font-size: 1rem;">Stay consistent with leaderboards, badges, and achievement milestones for quizzes, past papers, and attendance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+  <footer id="footer" style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); padding: 80px 0 0; position: relative; overflow: hidden;">
+      <!-- Background Elements -->
+      <div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: rgba(102, 126, 234, 0.1); border-radius: 50%; z-index: 1;"></div>
+      <div style="position: absolute; bottom: -100px; right: -100px; width: 300px; height: 300px; background: rgba(139, 92, 246, 0.1); border-radius: 50%; z-index: 1;"></div>
+      
+      <div class="container" style="position: relative; z-index: 2;">
+          <div class="row g-4">
+              <!-- Company Info -->
+              <div class="col-lg-4 col-md-6">
+                  <div style="margin-bottom: 30px;">
+                      <h3 style="font-size: 1.8rem; font-weight: 800; color: white; margin-bottom: 20px;">
+                          IG <span style="background: linear-gradient(45deg, #ffd700, #ffed4e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Nation</span>
+                      </h3>
+                      <p style="color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 1rem; margin-bottom: 30px;">
+                          Transforming education through innovative online learning. Join thousands of students achieving academic excellence with our expert-led courses and cutting-edge technology.
+                      </p>
+                      <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                          <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(59, 130, 246, 0.8)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+                              <iconify-icon icon="ri:facebook-fill" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M14 13h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"></path></svg></template></iconify-icon>
+                          </a>
+                          <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(29, 161, 242, 0.8)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+                              <iconify-icon icon="ri:twitter-fill" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M22.213 5.656a8.4 8.4 0 0 1-2.402.658A4.2 4.2 0 0 0 21.649 4c-.82.488-1.719.83-2.655 1.015a4.182 4.182 0 0 0-7.126 3.814a11.87 11.87 0 0 1-8.621-4.37a4.17 4.17 0 0 0-.566 2.103c0 1.45.739 2.731 1.86 3.481a4.2 4.2 0 0 1-1.894-.523v.051a4.185 4.185 0 0 0 3.355 4.102a4.2 4.2 0 0 1-1.89.072A4.185 4.185 0 0 0 8.02 16.65a8.4 8.4 0 0 1-6.192 1.732a11.83 11.83 0 0 0 6.41 1.88c7.694 0 11.9-6.373 11.9-11.9q0-.271-.012-.541a8.5 8.5 0 0 0 2.086-2.164"></path></svg></template></iconify-icon>
+                          </a>
+                          <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(225, 48, 108, 0.8)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+                              <iconify-icon icon="ri:instagram-fill" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5"></path></svg></template></iconify-icon>
+                          </a>
+                          <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);" onmouseover="this.style.background='rgba(255, 0, 0, 0.8)'; this.style.transform='translateY(-3px)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)'">
+                              <iconify-icon icon="ri:youtube-fill" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12.244 4c.534.003 1.87.016 3.29.073l.504.022c1.429.067 2.857.183 3.566.38c.945.266 1.687 1.04 1.938 2.022c.4 1.56.45 4.602.456 5.339l.001.152v.174c-.007.737-.057 3.78-.457 5.339c-.254.985-.997 1.76-1.938 2.022c-.709.197-2.137.313-3.566.38l-.504.023c-1.42.056-2.756.07-3.29.072l-.235.001h-.255c-1.13-.007-5.856-.058-7.36-.476c-.944-.266-1.687-1.04-1.938-2.022c-.4-1.56-.45-4.602-.456-5.339v-.326c.006-.737.056-3.78.456-5.339c.254-.985.997-1.76 1.939-2.021c1.503-.419 6.23-.47 7.36-.476zM9.999 8.5v7l6-3.5z"></path></svg></template></iconify-icon>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Quick Links -->
+              <div class="col-lg-2 col-md-6">
+                  <div style="margin-bottom: 30px;">
+                      <h5 style="font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Quick Links</h5>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                          <li style="margin-bottom: 12px;">
+                              <a href="./index.html" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.transform='translateX(0)';" onmouseover="this.style.color='#ffd700';" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  Home
+                              </a>
+                          </li>
+                          <li style="margin-bottom: 12px;">
+                              <a href="./about.html" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.transform='translateX(0)';" onmouseover="this.style.color='#ffd700';" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  About Us
+                              </a>
+                          </li>
+                          <li style="margin-bottom: 12px;">
+                              <a href="./courses.html" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.transform='translateX(0)';" onmouseover="this.style.color='#ffd700';" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  Courses
+                              </a>
+                          </li>
+                          <li style="margin-bottom: 12px;">
+                              <a href="./contact.html" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.transform='translateX(0)';" onmouseover="this.style.color='#ffd700';" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  Contact
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <!-- Support -->
+              <div class="col-lg-2 col-md-6">
+                  <div style="margin-bottom: 30px;">
+                      <h5 style="font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Support</h5>
+                      <ul style="list-style: none; padding: 0; margin: 0;">
+                          <li style="margin-bottom: 12px;">
+                              <a href="https://wa.me/201027500835" target="_blank" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.transform='translateX(0)'">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  WhatsApp Support
+                              </a>
+                          </li>
+                          <li style="margin-bottom: 12px;">
+                              <a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;" onmouseover="this.style.color='#ffd700'; this.style.transform='translateX(5px)'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.transform='translateX(0)'">
+                                  <iconify-icon icon="material-symbols:arrow-forward" style="font-size: 0.8rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"></path></svg></template></iconify-icon>
+                                  Help Center
+                              </a>
+                          </li>
+                          <li style="margin-bottom: 12px;">
+                              <!-- FAQ removed -->
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              
+              <!-- Contact Info -->
+              <div class="col-lg-4 col-md-6">
+                  <div style="margin-bottom: 30px;">
+                      <h5 style="font-size: 1.2rem; font-weight: 700; color: white; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;">Contact Info</h5>
+                      <div style="display: flex; flex-direction: column; gap: 20px;">
+                          <div style="display: flex; align-items: center; gap: 15px;">
+                              <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);">
+                                  <iconify-icon icon="mdi:location" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"></path></svg></template></iconify-icon>
+                              </div>
+                              <div>
+                                  <p style="color: rgba(255,255,255,0.9); font-weight: 600; margin: 0; font-size: 0.95rem;">Address</p>
+                                  <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.9rem;">New Cairo, Egypt</p>
+                              </div>
+                          </div>
+                          <div style="display: flex; align-items: center; gap: 15px;">
+                              <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);">
+                                  <iconify-icon icon="solar:phone-bold" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="m16.556 12.906l-.455.453s-1.083 1.076-4.038-1.862s-1.872-4.014-1.872-4.014l.286-.286c.707-.702.774-1.83.157-2.654L9.374 2.86C8.61 1.84 7.135 1.705 6.26 2.575l-1.57 1.56c-.433.432-.723.99-.688 1.61c.09 1.587.808 5 4.812 8.982c4.247 4.222 8.232 4.39 9.861 4.238c.516-.048.964-.31 1.325-.67l1.42-1.412c.96-.953.69-2.588-.538-3.255l-1.91-1.039c-.806-.437-1.787-.309-2.417.317"></path></svg></template></iconify-icon>
+                              </div>
+                              <div>
+                                  <p style="color: rgba(255,255,255,0.9); font-weight: 600; margin: 0; font-size: 0.95rem;">Phone</p>
+                                  <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.9rem;">01027500835</p>
+                              </div>
+                          </div>
+                          <div style="display: flex; align-items: center; gap: 15px;">
+                              <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);">
+                                  <iconify-icon icon="ic:baseline-email" style="color: white; font-size: 1.2rem;"><template shadowrootmode="open"><style data-style="data-style">:host{display:inline-block;vertical-align:0}span,svg{display:block}</style><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"></path></svg></template></iconify-icon>
+                              </div>
+                              <div>
+                                  <p style="color: rgba(255,255,255,0.9); font-weight: 600; margin: 0; font-size: 0.95rem;">Email</p>
+                                  <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.9rem;">info@ignation.com</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; padding: 30px 0; background: rgba(0,0,0,0.2);">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-md-6">
+                      <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.9rem;">
+                          © 2025 IG Nation. All rights reserved. | Designed with ❤️ for better education
+                      </p>
+                  </div>
+                  <div class="col-md-6 text-md-end">
+                      <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 0.9rem;">
+                          Made with <span style="color: #ffd700;">passion</span> for learning
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. COURSE FILTER LOGIC
+    const filterButtons = document.querySelectorAll('.subject-filter');
+    const courseItems = document.querySelectorAll('.isotope-container .item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Update Active Button UI
+            filterButtons.forEach(btn => {
+                btn.style.background = 'white';
+                btn.style.color = '#64748b';
+            });
+            button.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+            button.style.color = 'white';
+
+            const filterValue = button.getAttribute('data-filter');
+
+            // Show/Hide Items — '*' shows all, otherwise show only matching selector
+            courseItems.forEach(item => {
+                if (filterValue === '*' || item.matches(filterValue)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    }); 
+});
+// 2. SCROLL ANIMATION LOGIC
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+// 3. WHATSAPP CHAT FUNCTION
+function openWhatsAppChat() {
+    window.open('https://wa.me/201027500835', '_blank');
+}
+     </script>
+<!-- Login modal injection and handlers -->
+    <!-- Include Bootstrap JS bundle so modals work -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Login modal injection and handlers -->
+  <script>
+// Wire login button(s) to open the custom modal
+document.querySelectorAll('.login-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        showLoginModal();
+    });
+});
+
+function showLoginModal() {
+    const existing = document.getElementById('loginModal');
+    if (existing) existing.remove();
+
+    const loginModalHtml = `
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
+                <div class="modal-header" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 30px;">
+                    <div>
+                        <h5 class="modal-title mb-2" style="font-size: 1.5rem; font-weight: 700;">
+                            <iconify-icon icon="material-symbols:login" class="me-2"></iconify-icon>
+                            Login to Your Account
+                        </h5>
+                        <p class="mb-0" style="opacity: 0.9; font-size: 0.9rem;">Welcome back! Please enter your credentials</p>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" style="padding: 40px;">
+                    <div id="loginForm">
+                        <div class="mb-4">
+                            <label for="loginEmail" class="form-label" style="font-weight: 600; color: #333;">
+                                <iconify-icon icon="material-symbols:email" class="me-2"></iconify-icon>
+                                Email Address
+                            </label>
+                            <input type="email" id="loginEmail" class="form-control" autocapitalize="off" autocorrect="off" spellcheck="false" required style="text-transform: lowercase; border-radius: 10px; border: 2px solid #e0e0e0; padding: 12px 15px; font-size: 1rem;" oninput="this.value = this.value.toLowerCase()" onkeyup="this.value = this.value.toLowerCase()" onblur="this.value = this.value.toLowerCase()" placeholder="Enter your email address">
+                        </div>
+                        <div class="mb-4">
+                            <label for="loginPassword" class="form-label" style="font-weight: 600; color: #333;">
+                                <iconify-icon icon="material-symbols:password" class="me-2"></iconify-icon>
+                                Password
+                            </label>
+                            <div class="input-group">
+                                <input type="password" id="loginPassword" class="form-control" required autocomplete="new-password" readonly onfocus="this.removeAttribute('readonly')" oninput="togglePasswordIconVisibility()" style="text-transform: none; border-radius: 10px; border: 2px solid #e0e0e0; padding: 12px 15px; font-size: 1rem;" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Enter your password">
+                                <button class="btn btn-outline-secondary" type="button" id="loginPasswordToggleBtn" onclick="togglePasswordVisibility('loginPassword', 'loginPasswordToggle')" style="display:none; border-radius: 0 10px 10px 0; border: 2px solid #e0e0e0; border-left: none;">
+                                    <iconify-icon id="loginPasswordToggle" icon="material-symbols:visibility-off" style="font-size: 18px; color: #6b7280;"></iconify-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mb-4 text-end">
+                            <a href="#" class="text-primary text-decoration-none" onclick="showForgotPassword()" style="font-size: 0.9rem; font-weight: 500;">
+                                <iconify-icon icon="material-symbols:help" class="me-1"></iconify-icon>
+                                Forgot Password?
+                            </a>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100" onclick="handleLoginClick()" style="border-radius: 12px; padding: 15px; font-weight: 600; font-size: 1.1rem; background: linear-gradient(135deg, #667eea, #764ba2); border: none;">
+                            <iconify-icon icon="material-symbols:login" class="me-2"></iconify-icon>
+                            Log In
+                        </button>
+                        
+                        <div class="text-center mt-4">
+                            <small class="text-muted">
+                                <iconify-icon icon="material-symbols:lock" class="me-1"></iconify-icon>
+                                Your information is secure and encrypted
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>`;
+
+    document.body.insertAdjacentHTML('beforeend', loginModalHtml);
+
+
+
+function handleLoginClick() {
+    const email = document.getElementById('loginEmail')?.value || '';
+    const pwd = document.getElementById('loginPassword')?.value || '';
+    if (!email || !pwd) {
+        alert('Please enter both email and password');
+        return;
+    }
+    console.log('Logging in', email);
+    const modalEl = document.getElementById('loginModal');
+    if (modalEl && window.bootstrap) {
+        const bs = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+        bs.hide();
+    }
+}
+
+function showForgotPassword() {
+    alert('Forgot password flow — implement as needed');
+}
+
+  </script>
+  <script>
+// Dropdown helper and phone validation
+function toggleDropdown(prefix) {
+    const optionsId = prefix + 'Options';
+    const el = document.getElementById(optionsId);
+    if (!el) return;
+    el.style.display = (el.style.display === 'none' || !el.style.display) ? 'block' : 'none';
+}
+
+function selectCountry(hiddenId, code, flag, label) {
+    const hidden = document.getElementById(hiddenId);
+    if (hidden) hidden.value = code;
+    // find the dropdown-selected within same group
+    const optionsId = (hiddenId === 'phoneCountry') ? 'phoneCountryOptions' : (hiddenId === 'parentPhoneCountry' ? 'parentPhoneCountryOptions' : null);
+    let selectedEl = null;
+    if (optionsId) selectedEl = document.getElementById(optionsId)?.previousElementSibling;
+    // fallback: query by data-value
+    const all = document.querySelectorAll('.dropdown-option');
+    all.forEach(opt => opt.parentElement && (opt.parentElement.style.display = 'none'));
+    if (selectedEl) {
+        // update shown text
+        const flagSpan = selectedEl.querySelector('.flag');
+        const countryText = selectedEl.querySelector('.country-text');
+        if (flagSpan) flagSpan.textContent = flag;
+        if (countryText) countryText.textContent = label;
+    }
+}
+
+function validateMiddleEastPhone(fieldId) {
+    const country = (fieldId === 'parentPhone') ? document.getElementById('parentPhoneCountry')?.value : document.getElementById('phoneCountry')?.value;
+    const input = document.getElementById(fieldId);
+    const err = document.getElementById(fieldId === 'parentPhone' ? 'parentPhoneError' : 'phoneError');
+    if (!input) return true;
+    const cleaned = (input.value || '').replace(/\D/g, '');
+    let valid = false;
+    if (country === 'EG') {
+        valid = /^01\d{9}$/.test(cleaned);
+    } else if (country === 'SA') {
+        valid = /^5\d{8,9}$/.test(cleaned) || /^05\d{8,9}$/.test(cleaned);
+    } else if (country === 'AE') {
+        valid = /^5\d{8}$/.test(cleaned) || /^50\d{7}$/.test(cleaned);
+    } else {
+        valid = cleaned.length >= 7 && cleaned.length <= 15;
+    }
+    if (err) err.style.display = valid ? 'none' : 'block';
+    return valid;
+}
+    </script>
+
+    <script>
+    // Show choice when user clicks Enroll — then open Login or Register modal
+    function enrollInCourse(courseId) {
+            const modalId = 'enrollChoiceModal';
+            const existing = document.getElementById(modalId);
+            if (existing) existing.remove();
+
+            // friendly course title
+            const friendly = (courseId || '').replace(/[-_]/g, ' ');
+            const title = friendly.charAt(0).toUpperCase() + friendly.slice(1);
+
+            const modalHtml = `
+            <div class="modal fade" id="${modalId}" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content" style="border-radius:20px; border: none; overflow: hidden;">
+                        <div class="modal-header" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 24px 30px;">
+                            <div>
+                                <h5 class="modal-title" style="font-weight:700;">Enroll in ${title}</h5>
+                                <p class="mb-0" style="opacity:0.95; font-size:0.9rem;">You need an account to continue. Choose an option below.</p>
+                            </div>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 40px;">
+                            <p class="mb-3" style="color:#475569;">To enroll you need an account. Do you already have one or would you like to register a new account?</p>
+                            <div class="d-grid gap-2">
+                                <button id="enrollLoginBtn" class="btn" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; padding: 12px; font-weight:600;">Login to Existing Account</button>
+                                <button id="enrollRegisterBtn" class="btn" style="background: white; color: #667eea; border: 2px solid #667eea; border-radius: 12px; padding: 12px; font-weight:600;">Register New Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+            const modalEl = document.getElementById(modalId);
+            if (modalEl && window.bootstrap) {
+                    const bs = new bootstrap.Modal(modalEl);
+                    bs.show();
+
+                    // wire buttons
+                    document.getElementById('enrollLoginBtn')?.addEventListener('click', () => {
+                            bs.hide();
+                            showLoginModal && showLoginModal();
+                    });
+                    document.getElementById('enrollRegisterBtn')?.addEventListener('click', () => {
+                            bs.hide();
+                            showRegisterModal && showRegisterModal();
+                    });
+            } else {
+                    // fallback: use confirm dialogs
+                    const wantsLogin = confirm('To enroll you need an account. Press OK to login, Cancel to register.');
+                    if (wantsLogin) {
+                            showLoginModal && showLoginModal();
+                    } else {
+                            showRegisterModal && showRegisterModal();
+                    }
+            }
+    }
+    </script>
+
+
+
+        <script type="module">
+            import { supabase } from './js/supabaseClient.js';
+            window.handleRegisterClick = async function() {
+                // Get values from v2.0 form
+                const userType = document.getElementById('userType').value;
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const phonenumber = document.getElementById('phone')?.value || '';
+                const parent_phonenumber = document.getElementById('parentPhone')?.value || '';
+                // Validate required fields
+                if (!userType || !firstName || !lastName || !email || !password) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                // Insert into Supabase
+                const { data, error } = await supabase
+                    .from('users')
+                    .insert([{ 
+                        role: userType, 
+                        name: firstName + ' ' + lastName, 
+                        email, 
+                        password, 
+                        phonenumber,
+                        parent_phonenumber
+                    }]);
+                if (error) {
+                    alert('Registration failed: ' + error.message);
+                } else {
+                    alert('User registered successfully!');
+                    // Optionally reset form fields
+                    document.getElementById('userType').value = '';
+                    document.getElementById('firstName').value = '';
+                    document.getElementById('lastName').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('password').value = '';
+                    if(document.getElementById('phone')) document.getElementById('phone').value = '';
+                    if(document.getElementById('parentPhone')) document.getElementById('parentPhone').value = '';
+                    // Hide the modal safely after registration
+                    const modalEl = document.getElementById('registerModal');
+                    if (modalEl && window.bootstrap) {
+                        let bs = bootstrap.Modal.getInstance(modalEl);
+                        if (!bs) bs = new bootstrap.Modal(modalEl);
+                        bs.hide();
+                    }
+                }
+            }
+        }
+    </script>
+    </body>
+</html>

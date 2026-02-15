@@ -1,0 +1,60 @@
+-- SQL schema for Educational Learning Platform (PostgreSQL)
+
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  role VARCHAR(20) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS courses (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  teacher_id INTEGER REFERENCES users(id),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS lessons (
+  id SERIAL PRIMARY KEY,
+  course_id INTEGER REFERENCES courses(id),
+  title VARCHAR(255) NOT NULL,
+  content TEXT,
+  video_url TEXT,
+  files TEXT[],
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS homework (
+  id SERIAL PRIMARY KEY,
+  course_id INTEGER REFERENCES courses(id),
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  deadline TIMESTAMP,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS submissions (
+  id SERIAL PRIMARY KEY,
+  homework_id INTEGER REFERENCES homework(id),
+  student_id INTEGER REFERENCES users(id),
+  file TEXT,
+  text TEXT,
+  submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Enrollment table for students in courses
+CREATE TABLE IF NOT EXISTS enrollments (
+  id SERIAL PRIMARY KEY,
+  course_id INTEGER REFERENCES courses(id),
+  student_id INTEGER REFERENCES users(id),
+  enrolled_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
